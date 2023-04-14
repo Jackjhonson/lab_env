@@ -30,7 +30,7 @@ def main(sqluser, sqlpass):
   # create a database connection and connect to local postgres version of mimic
   dbname = 'mimic'
   schema_name = 'mimiciii'
-  con = psycopg2.connect(dbname=dbname, user=sqluser, host='127.0.0.1', password=sqlpass)
+  con = psycopg2.connect(dbname=dbname, user=sqluser, host='10.196.83.72', password=sqlpass)
   cur = con.cursor()
   cur.execute('SET search_path to ' + schema_name)
 
