@@ -1,7 +1,8 @@
 name: tsx
 channels:
   - pytorch
-  - defaults
+  - default
+
 dependencies:
   - _libgcc_mutex=0.1=main
   - _pytorch_select=0.2=gpu_0
@@ -159,5 +160,6 @@ dependencies:
     - symengine==0.4.0
     - sympy==1.4
     - tables==3.5.1
+    - -i https://pypi.tuna.tsinghua.edu.cn/simple
 prefix: /h/shalmali/anaconda3/envs/tsx
 
