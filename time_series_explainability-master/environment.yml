@@ -129,7 +129,6 @@ dependencies:
   - terminado=0.8.3=py37_0
   - testpath=0.4.4=py_0
   - tk=8.6.8=hbc83047_0
-  # - torchvision=0.6.0=py37_cu92
   - tornado=6.0.3=py37h7b6447c_3
   - tqdm=4.45.0=py_0
   - traitlets=4.3.3=py37_0
@@ -148,6 +147,7 @@ dependencies:
     - imageio==2.5.0
     - jitcdde==1.4.0
     - jitcxde-common==1.4.1
+    - torchvision==0.6.0
     - lime==0.1.1.36
     - mock==3.0.4
     - mpmath==1.1.0
@@ -160,6 +160,5 @@ dependencies:
     - symengine==0.4.0
     - sympy==1.4
     - tables==3.5.1
-    - -i https://pypi.tuna.tsinghua.edu.cn/simple
 prefix: /h/shalmali/anaconda3/envs/tsx
 
