@@ -1,0 +1,212 @@
+2023-04-15 11:11:29,961     INFO                      Base: data           : mimic
+2023-04-15 11:11:29,962     INFO                      Base: delay          : 0
+2023-04-15 11:11:29,962     INFO                      Base: explainer      : ['winit']
+2023-04-15 11:11:29,962     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-15 11:11:29,962     INFO                      Base: testbs         : -1
+2023-04-15 11:11:29,962     INFO                      Base: dataseed       : 1234
+2023-04-15 11:11:29,962     INFO                      Base: datapath       : None
+2023-04-15 11:11:29,962     INFO                      Base: explainerseed  : 2345
+2023-04-15 11:11:29,962     INFO                      Base: outpath        : ./output/
+2023-04-15 11:11:29,962     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-15 11:11:29,962     INFO                      Base: plotpath       : ./plots/
+2023-04-15 11:11:29,962     INFO                      Base: logpath        : ./logs/
+2023-04-15 11:11:29,962     INFO                      Base: resultfile     : results.csv
+2023-04-15 11:11:29,962     INFO                      Base: logfile        : None
+2023-04-15 11:11:29,963     INFO                      Base: train          : True
+2023-04-15 11:11:29,963     INFO                      Base: traingen       : False
+2023-04-15 11:11:29,963     INFO                      Base: skipexplain    : True
+2023-04-15 11:11:29,963     INFO                      Base: eval           : False
+2023-04-15 11:11:29,963     INFO                      Base: loglevel       : info
+2023-04-15 11:11:29,963     INFO                      Base: nondeterministic: False
+2023-04-15 11:11:29,963     INFO                      Base: hiddensize     : 200
+2023-04-15 11:11:29,963     INFO                      Base: batchsize      : 100
+2023-04-15 11:11:29,963     INFO                      Base: dropout        : 0.5
+2023-04-15 11:11:29,963     INFO                      Base: numlayers      : 1
+2023-04-15 11:11:29,963     INFO                      Base: modeltype      : gru
+2023-04-15 11:11:29,963     INFO                      Base: lr             : None
+2023-04-15 11:11:29,963     INFO                      Base: joint          : False
+2023-04-15 11:11:29,964     INFO                      Base: conditional    : False
+2023-04-15 11:11:29,964     INFO                      Base: area           : None
+2023-04-15 11:11:29,964     INFO                      Base: blurtype       : None
+2023-04-15 11:11:29,964     INFO                      Base: deletion       : None
+2023-04-15 11:11:29,964     INFO                      Base: sizereg        : None
+2023-04-15 11:11:29,964     INFO                      Base: timereg        : None
+2023-04-15 11:11:29,964     INFO                      Base: loss           : None
+2023-04-15 11:11:29,964     INFO                      Base: epoch          : 200
+2023-04-15 11:11:29,964     INFO                      Base: lastonly       : None
+2023-04-15 11:11:29,964     INFO                      Base: window         : [10]
+2023-04-15 11:11:29,964     INFO                      Base: winitmetric    : ['pd']
+2023-04-15 11:11:29,964     INFO                      Base: usedatadist    : False
+2023-04-15 11:11:29,964     INFO                      Base: samples        : -1
+2023-04-15 11:11:29,965     INFO                      Base: maskseed       : 43814
+2023-04-15 11:11:29,965     INFO                      Base: mask           : ['std', 'end']
+2023-04-15 11:11:29,965     INFO                      Base: top            : 50
+2023-04-15 11:11:29,965     INFO                      Base: toppc          : 0.05
+2023-04-15 11:11:29,965     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-15 11:11:29,965     INFO                      Base: aggregate      : ['mean']
+2023-04-15 11:11:32,529     INFO        ModelTrainerWithCv: Training model for cv=0
+2023-04-15 11:11:55,388     INFO              ModelTrainer: Epoch 1
+2023-04-15 11:11:55,389     INFO              ModelTrainer: Training   ===> Loss: 0.47034299413900116, Acc: 84.74%, Auc: 0.5882
+2023-04-15 11:11:55,389     INFO              ModelTrainer: Validation ===> Loss: 0.35969181157447194, Acc: 89.91%, Auc: 0.7135
+2023-04-15 11:15:39,758     INFO              ModelTrainer: Epoch 11
+2023-04-15 11:15:39,758     INFO              ModelTrainer: Training   ===> Loss: 0.27247771353939093, Acc: 90.56%, Auc: 0.7843
+2023-04-15 11:15:39,758     INFO              ModelTrainer: Validation ===> Loss: 0.2741471859248909, Acc: 90.65%, Auc: 0.7792
+2023-04-15 11:19:22,057     INFO              ModelTrainer: Epoch 21
+2023-04-15 11:19:22,057     INFO              ModelTrainer: Training   ===> Loss: 0.26134265929057793, Acc: 90.88%, Auc: 0.8073
+2023-04-15 11:19:22,057     INFO              ModelTrainer: Validation ===> Loss: 0.2736906364962861, Acc: 90.78%, Auc: 0.7803
+2023-04-15 11:23:04,448     INFO              ModelTrainer: Epoch 31
+2023-04-15 11:23:04,448     INFO              ModelTrainer: Training   ===> Loss: 0.2509514295269509, Acc: 91.12%, Auc: 0.8274
+2023-04-15 11:23:04,448     INFO              ModelTrainer: Validation ===> Loss: 0.27178301078242223, Acc: 90.78%, Auc: 0.7860
+2023-04-15 11:26:46,650     INFO              ModelTrainer: Epoch 41
+2023-04-15 11:26:46,650     INFO              ModelTrainer: Training   ===> Loss: 0.2449210843423734, Acc: 91.04%, Auc: 0.8407
+2023-04-15 11:26:46,650     INFO              ModelTrainer: Validation ===> Loss: 0.2710658750824026, Acc: 90.76%, Auc: 0.7881
+2023-04-15 11:30:29,306     INFO              ModelTrainer: Epoch 51
+2023-04-15 11:30:29,306     INFO              ModelTrainer: Training   ===> Loss: 0.24095494526664954, Acc: 91.14%, Auc: 0.8490
+2023-04-15 11:30:29,306     INFO              ModelTrainer: Validation ===> Loss: 0.26896900784324956, Acc: 90.86%, Auc: 0.7930
+2023-04-15 11:34:12,372     INFO              ModelTrainer: Epoch 61
+2023-04-15 11:34:12,373     INFO              ModelTrainer: Training   ===> Loss: 0.2367546173265657, Acc: 91.07%, Auc: 0.8570
+2023-04-15 11:34:12,373     INFO              ModelTrainer: Validation ===> Loss: 0.2692165680833765, Acc: 90.70%, Auc: 0.7944
+2023-04-15 11:37:54,679     INFO              ModelTrainer: Epoch 71
+2023-04-15 11:37:54,679     INFO              ModelTrainer: Training   ===> Loss: 0.2332573563263223, Acc: 91.30%, Auc: 0.8629
+2023-04-15 11:37:54,680     INFO              ModelTrainer: Validation ===> Loss: 0.26950449275003896, Acc: 90.65%, Auc: 0.7949
+2023-04-15 11:41:37,253     INFO              ModelTrainer: Epoch 81
+2023-04-15 11:41:37,253     INFO              ModelTrainer: Training   ===> Loss: 0.2310043615163178, Acc: 91.27%, Auc: 0.8651
+2023-04-15 11:41:37,253     INFO              ModelTrainer: Validation ===> Loss: 0.26900955108371943, Acc: 90.62%, Auc: 0.7974
+2023-04-15 11:45:19,414     INFO              ModelTrainer: Epoch 91
+2023-04-15 11:45:19,414     INFO              ModelTrainer: Training   ===> Loss: 0.22715665742352203, Acc: 91.49%, Auc: 0.8696
+2023-04-15 11:45:19,414     INFO              ModelTrainer: Validation ===> Loss: 0.26963115705026164, Acc: 90.65%, Auc: 0.7995
+2023-04-15 11:48:40,970     INFO              ModelTrainer: Test ===> Loss: 0.24885649383068084, Acc: 90.93%, Auc: 0.8067
+2023-04-15 11:48:40,970     INFO        ModelTrainerWithCv: Training model for cv=1
+2023-04-15 11:49:03,208     INFO              ModelTrainer: Epoch 1
+2023-04-15 11:49:03,208     INFO              ModelTrainer: Training   ===> Loss: 0.5396542138344532, Acc: 76.91%, Auc: 0.6139
+2023-04-15 11:49:03,208     INFO              ModelTrainer: Validation ===> Loss: 0.40921365973111745, Acc: 88.99%, Auc: 0.7261
+2023-04-15 11:52:43,861     INFO              ModelTrainer: Epoch 11
+2023-04-15 11:52:43,861     INFO              ModelTrainer: Training   ===> Loss: 0.26862151825146097, Acc: 90.83%, Auc: 0.7807
+2023-04-15 11:52:43,861     INFO              ModelTrainer: Validation ===> Loss: 0.2928130187698313, Acc: 89.61%, Auc: 0.7804
+2023-04-15 11:56:24,154     INFO              ModelTrainer: Epoch 21
+2023-04-15 11:56:24,154     INFO              ModelTrainer: Training   ===> Loss: 0.2582818658871425, Acc: 90.84%, Auc: 0.8034
+2023-04-15 11:56:24,154     INFO              ModelTrainer: Validation ===> Loss: 0.2871537144119675, Acc: 89.80%, Auc: 0.7941
+2023-04-15 12:00:04,204     INFO              ModelTrainer: Epoch 31
+2023-04-15 12:00:04,204     INFO              ModelTrainer: Training   ===> Loss: 0.2533061088037652, Acc: 91.10%, Auc: 0.8170
+2023-04-15 12:00:04,204     INFO              ModelTrainer: Validation ===> Loss: 0.28483237205324946, Acc: 89.83%, Auc: 0.7986
+2023-04-15 12:03:44,668     INFO              ModelTrainer: Epoch 41
+2023-04-15 12:03:44,669     INFO              ModelTrainer: Training   ===> Loss: 0.24870149967436855, Acc: 90.95%, Auc: 0.8260
+2023-04-15 12:03:44,669     INFO              ModelTrainer: Validation ===> Loss: 0.28223957967113805, Acc: 89.86%, Auc: 0.8040
+2023-04-15 12:07:25,261     INFO              ModelTrainer: Epoch 51
+2023-04-15 12:07:25,261     INFO              ModelTrainer: Training   ===> Loss: 0.24588137769417182, Acc: 91.18%, Auc: 0.8311
+2023-04-15 12:07:25,261     INFO              ModelTrainer: Validation ===> Loss: 0.2798168651155523, Acc: 89.83%, Auc: 0.8097
+2023-04-15 12:11:05,938     INFO              ModelTrainer: Epoch 61
+2023-04-15 12:11:05,939     INFO              ModelTrainer: Training   ===> Loss: 0.24125383567769784, Acc: 91.27%, Auc: 0.8405
+2023-04-15 12:11:05,939     INFO              ModelTrainer: Validation ===> Loss: 0.27561173608174194, Acc: 90.02%, Auc: 0.8170
+2023-04-15 12:14:46,336     INFO              ModelTrainer: Epoch 71
+2023-04-15 12:14:46,336     INFO              ModelTrainer: Training   ===> Loss: 0.23675472671921188, Acc: 91.28%, Auc: 0.8482
+2023-04-15 12:14:46,336     INFO              ModelTrainer: Validation ===> Loss: 0.27277778209866704, Acc: 90.16%, Auc: 0.8223
+2023-04-15 12:18:26,543     INFO              ModelTrainer: Epoch 81
+2023-04-15 12:18:26,543     INFO              ModelTrainer: Training   ===> Loss: 0.2351496441642175, Acc: 91.25%, Auc: 0.8525
+2023-04-15 12:18:26,543     INFO              ModelTrainer: Validation ===> Loss: 0.27368427088131775, Acc: 90.18%, Auc: 0.8212
+2023-04-15 12:22:07,155     INFO              ModelTrainer: Epoch 91
+2023-04-15 12:22:07,155     INFO              ModelTrainer: Training   ===> Loss: 0.23253344412188273, Acc: 91.50%, Auc: 0.8550
+2023-04-15 12:22:07,156     INFO              ModelTrainer: Validation ===> Loss: 0.2714580913653245, Acc: 90.21%, Auc: 0.8246
+2023-04-15 12:25:26,440     INFO              ModelTrainer: Test ===> Loss: 0.2456352651119232, Acc: 91.37%, Auc: 0.8088
+2023-04-15 12:25:26,440     INFO        ModelTrainerWithCv: Training model for cv=2
+2023-04-15 12:25:48,397     INFO              ModelTrainer: Epoch 1
+2023-04-15 12:25:48,397     INFO              ModelTrainer: Training   ===> Loss: 0.5766587150660721, Acc: 72.85%, Auc: 0.6030
+2023-04-15 12:25:48,397     INFO              ModelTrainer: Validation ===> Loss: 0.41919415303178736, Acc: 89.75%, Auc: 0.7002
+2023-04-15 12:29:28,397     INFO              ModelTrainer: Epoch 11
+2023-04-15 12:29:28,397     INFO              ModelTrainer: Training   ===> Loss: 0.2704330147118182, Acc: 90.57%, Auc: 0.7894
+2023-04-15 12:29:28,397     INFO              ModelTrainer: Validation ===> Loss: 0.279684715577074, Acc: 90.40%, Auc: 0.7567
+2023-04-15 12:33:08,626     INFO              ModelTrainer: Epoch 21
+2023-04-15 12:33:08,627     INFO              ModelTrainer: Training   ===> Loss: 0.26015383785439505, Acc: 90.78%, Auc: 0.8119
+2023-04-15 12:33:08,627     INFO              ModelTrainer: Validation ===> Loss: 0.2752380898675403, Acc: 90.51%, Auc: 0.7691
+2023-04-15 12:36:49,714     INFO              ModelTrainer: Epoch 31
+2023-04-15 12:36:49,714     INFO              ModelTrainer: Training   ===> Loss: 0.25488831112916405, Acc: 90.83%, Auc: 0.8217
+2023-04-15 12:36:49,714     INFO              ModelTrainer: Validation ===> Loss: 0.2733549765638403, Acc: 90.67%, Auc: 0.7742
+2023-04-15 12:40:30,588     INFO              ModelTrainer: Epoch 41
+2023-04-15 12:40:30,588     INFO              ModelTrainer: Training   ===> Loss: 0.24977222709236918, Acc: 90.95%, Auc: 0.8330
+2023-04-15 12:40:30,588     INFO              ModelTrainer: Validation ===> Loss: 0.2707101042206223, Acc: 90.65%, Auc: 0.7831
+2023-04-15 12:44:11,246     INFO              ModelTrainer: Epoch 51
+2023-04-15 12:44:11,246     INFO              ModelTrainer: Training   ===> Loss: 0.24347816020048954, Acc: 90.97%, Auc: 0.8449
+2023-04-15 12:44:11,247     INFO              ModelTrainer: Validation ===> Loss: 0.2684435687355093, Acc: 90.65%, Auc: 0.7893
+2023-04-15 12:47:51,612     INFO              ModelTrainer: Epoch 61
+2023-04-15 12:47:51,613     INFO              ModelTrainer: Training   ===> Loss: 0.2387768051813583, Acc: 91.24%, Auc: 0.8524
+2023-04-15 12:47:51,613     INFO              ModelTrainer: Validation ===> Loss: 0.26765203596772374, Acc: 90.62%, Auc: 0.7931
+2023-04-15 12:51:32,424     INFO              ModelTrainer: Epoch 71
+2023-04-15 12:51:32,424     INFO              ModelTrainer: Training   ===> Loss: 0.23771567083895206, Acc: 91.18%, Auc: 0.8534
+2023-04-15 12:51:32,424     INFO              ModelTrainer: Validation ===> Loss: 0.2667683439480292, Acc: 90.70%, Auc: 0.7952
+2023-04-15 12:55:12,660     INFO              ModelTrainer: Epoch 81
+2023-04-15 12:55:12,661     INFO              ModelTrainer: Training   ===> Loss: 0.2337017846167893, Acc: 91.15%, Auc: 0.8624
+2023-04-15 12:55:12,661     INFO              ModelTrainer: Validation ===> Loss: 0.2677088979933713, Acc: 90.65%, Auc: 0.7952
+2023-04-15 12:58:52,921     INFO              ModelTrainer: Epoch 91
+2023-04-15 12:58:52,921     INFO              ModelTrainer: Training   ===> Loss: 0.23047885948137656, Acc: 91.30%, Auc: 0.8662
+2023-04-15 12:58:52,922     INFO              ModelTrainer: Validation ===> Loss: 0.268050687941345, Acc: 90.46%, Auc: 0.7953
+2023-04-15 13:02:12,299     INFO              ModelTrainer: Test ===> Loss: 0.24648124277591704, Acc: 90.97%, Auc: 0.8102
+2023-04-15 13:02:12,299     INFO        ModelTrainerWithCv: Training model for cv=3
+2023-04-15 13:02:34,401     INFO              ModelTrainer: Epoch 1
+2023-04-15 13:02:34,401     INFO              ModelTrainer: Training   ===> Loss: 0.6400826535112148, Acc: 64.51%, Auc: 0.5989
+2023-04-15 13:02:34,402     INFO              ModelTrainer: Validation ===> Loss: 0.4558785976590337, Acc: 89.64%, Auc: 0.7301
+2023-04-15 13:06:15,147     INFO              ModelTrainer: Epoch 11
+2023-04-15 13:06:15,148     INFO              ModelTrainer: Training   ===> Loss: 0.27438416790116477, Acc: 90.39%, Auc: 0.7830
+2023-04-15 13:06:15,148     INFO              ModelTrainer: Validation ===> Loss: 0.2613920122385025, Acc: 90.89%, Auc: 0.7989
+2023-04-15 13:09:55,975     INFO              ModelTrainer: Epoch 21
+2023-04-15 13:09:55,975     INFO              ModelTrainer: Training   ===> Loss: 0.26336359288040045, Acc: 90.72%, Auc: 0.8047
+2023-04-15 13:09:55,975     INFO              ModelTrainer: Validation ===> Loss: 0.2565499032671387, Acc: 90.89%, Auc: 0.8112
+2023-04-15 13:13:36,328     INFO              ModelTrainer: Epoch 31
+2023-04-15 13:13:36,329     INFO              ModelTrainer: Training   ===> Loss: 0.2557156057273214, Acc: 90.98%, Auc: 0.8207
+2023-04-15 13:13:36,329     INFO              ModelTrainer: Validation ===> Loss: 0.2541837877518422, Acc: 90.89%, Auc: 0.8170
+2023-04-15 13:17:17,094     INFO              ModelTrainer: Epoch 41
+2023-04-15 13:17:17,094     INFO              ModelTrainer: Training   ===> Loss: 0.25094512724191753, Acc: 91.07%, Auc: 0.8311
+2023-04-15 13:17:17,094     INFO              ModelTrainer: Validation ===> Loss: 0.25218180305248983, Acc: 91.00%, Auc: 0.8224
+2023-04-15 13:20:57,680     INFO              ModelTrainer: Epoch 51
+2023-04-15 13:20:57,680     INFO              ModelTrainer: Training   ===> Loss: 0.24573529390869914, Acc: 91.11%, Auc: 0.8399
+2023-04-15 13:20:57,680     INFO              ModelTrainer: Validation ===> Loss: 0.25123211781720856, Acc: 91.03%, Auc: 0.8252
+2023-04-15 13:24:38,606     INFO              ModelTrainer: Epoch 61
+2023-04-15 13:24:38,607     INFO              ModelTrainer: Training   ===> Loss: 0.24195471441222205, Acc: 91.23%, Auc: 0.8462
+2023-04-15 13:24:38,607     INFO              ModelTrainer: Validation ===> Loss: 0.25117322681723414, Acc: 90.97%, Auc: 0.8253
+2023-04-15 13:28:19,160     INFO              ModelTrainer: Epoch 71
+2023-04-15 13:28:19,161     INFO              ModelTrainer: Training   ===> Loss: 0.2407038710709359, Acc: 91.14%, Auc: 0.8506
+2023-04-15 13:28:19,161     INFO              ModelTrainer: Validation ===> Loss: 0.24921669710326838, Acc: 91.05%, Auc: 0.8300
+2023-04-15 13:31:59,668     INFO              ModelTrainer: Epoch 81
+2023-04-15 13:31:59,669     INFO              ModelTrainer: Training   ===> Loss: 0.23797452203123956, Acc: 91.27%, Auc: 0.8544
+2023-04-15 13:31:59,669     INFO              ModelTrainer: Validation ===> Loss: 0.24809374881757273, Acc: 91.03%, Auc: 0.8320
+2023-04-15 13:35:39,625     INFO              ModelTrainer: Epoch 91
+2023-04-15 13:35:39,626     INFO              ModelTrainer: Training   ===> Loss: 0.23535958838623924, Acc: 91.17%, Auc: 0.8593
+2023-04-15 13:35:39,626     INFO              ModelTrainer: Validation ===> Loss: 0.24847237282508128, Acc: 91.11%, Auc: 0.8312
+2023-04-15 13:38:59,018     INFO              ModelTrainer: Test ===> Loss: 0.2477266013622284, Acc: 91.06%, Auc: 0.8083
+2023-04-15 13:38:59,019     INFO        ModelTrainerWithCv: Training model for cv=4
+2023-04-15 13:39:21,042     INFO              ModelTrainer: Epoch 1
+2023-04-15 13:39:21,042     INFO              ModelTrainer: Training   ===> Loss: 0.6431181571773581, Acc: 64.51%, Auc: 0.6095
+2023-04-15 13:39:21,042     INFO              ModelTrainer: Validation ===> Loss: 0.45209407484209213, Acc: 89.21%, Auc: 0.7279
+2023-04-15 13:43:01,716     INFO              ModelTrainer: Epoch 11
+2023-04-15 13:43:01,717     INFO              ModelTrainer: Training   ===> Loss: 0.2757223376349823, Acc: 90.33%, Auc: 0.7809
+2023-04-15 13:43:01,717     INFO              ModelTrainer: Validation ===> Loss: 0.2629605821661047, Acc: 91.16%, Auc: 0.7756
+2023-04-15 13:46:41,673     INFO              ModelTrainer: Epoch 21
+2023-04-15 13:46:41,674     INFO              ModelTrainer: Training   ===> Loss: 0.26494523933207664, Acc: 90.52%, Auc: 0.8090
+2023-04-15 13:46:41,674     INFO              ModelTrainer: Validation ===> Loss: 0.2561367983753617, Acc: 91.14%, Auc: 0.7957
+2023-04-15 13:50:22,225     INFO              ModelTrainer: Epoch 31
+2023-04-15 13:50:22,225     INFO              ModelTrainer: Training   ===> Loss: 0.2530897118755289, Acc: 90.86%, Auc: 0.8306
+2023-04-15 13:50:22,225     INFO              ModelTrainer: Validation ===> Loss: 0.2538089941482286, Acc: 91.00%, Auc: 0.8060
+2023-04-15 13:54:02,741     INFO              ModelTrainer: Epoch 41
+2023-04-15 13:54:02,741     INFO              ModelTrainer: Training   ===> Loss: 0.2467210792709847, Acc: 90.78%, Auc: 0.8433
+2023-04-15 13:54:02,741     INFO              ModelTrainer: Validation ===> Loss: 0.2524604189234811, Acc: 91.05%, Auc: 0.8088
+2023-04-15 13:57:43,394     INFO              ModelTrainer: Epoch 51
+2023-04-15 13:57:43,395     INFO              ModelTrainer: Training   ===> Loss: 0.242034634524906, Acc: 90.93%, Auc: 0.8512
+2023-04-15 13:57:43,395     INFO              ModelTrainer: Validation ===> Loss: 0.25280807187428345, Acc: 90.95%, Auc: 0.8086
+2023-04-15 14:01:24,634     INFO              ModelTrainer: Epoch 61
+2023-04-15 14:01:24,634     INFO              ModelTrainer: Training   ===> Loss: 0.23991773086222443, Acc: 91.10%, Auc: 0.8533
+2023-04-15 14:01:24,634     INFO              ModelTrainer: Validation ===> Loss: 0.25219729985739736, Acc: 91.00%, Auc: 0.8100
+2023-04-15 14:05:04,944     INFO              ModelTrainer: Epoch 71
+2023-04-15 14:05:04,944     INFO              ModelTrainer: Training   ===> Loss: 0.2372040909689826, Acc: 91.15%, Auc: 0.8574
+2023-04-15 14:05:04,944     INFO              ModelTrainer: Validation ===> Loss: 0.2530627528557906, Acc: 91.00%, Auc: 0.8088
+2023-04-15 14:08:45,091     INFO              ModelTrainer: Epoch 81
+2023-04-15 14:08:45,091     INFO              ModelTrainer: Training   ===> Loss: 0.2353708565839239, Acc: 91.17%, Auc: 0.8617
+2023-04-15 14:08:45,091     INFO              ModelTrainer: Validation ===> Loss: 0.25351630876193176, Acc: 90.86%, Auc: 0.8093
+2023-04-15 14:12:25,851     INFO              ModelTrainer: Epoch 91
+2023-04-15 14:12:25,851     INFO              ModelTrainer: Training   ===> Loss: 0.231867010075901, Acc: 91.27%, Auc: 0.8661
+2023-04-15 14:12:25,851     INFO              ModelTrainer: Validation ===> Loss: 0.25392762551436554, Acc: 90.81%, Auc: 0.8101
+2023-04-15 14:15:45,841     INFO              ModelTrainer: Test ===> Loss: 0.24573611617088317, Acc: 91.13%, Auc: 0.8137
+2023-04-15 14:15:50,065     INFO         ExplanationRunner: Average Accuracy = 0.9109±0.0015
+2023-04-15 14:15:50,065     INFO         ExplanationRunner: Model Accuracy on Tests = [0.909308, 0.913658, 0.909743, 0.910613, 0.911266].
+2023-04-15 14:15:50,066     INFO         ExplanationRunner: Average AUC = 0.8095±0.0024
+2023-04-15 14:15:50,066     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
+2023-04-15 14:15:50,066     INFO                      Base: Load data and train/load model done.
+2023-04-15 14:15:50,068     INFO                      Base: All done! Time elapsed: 11060.10689997673
