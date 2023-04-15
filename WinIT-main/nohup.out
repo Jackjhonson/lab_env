@@ -210,3 +210,62 @@
 2023-04-15 14:15:50,066     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
 2023-04-15 14:15:50,066     INFO                      Base: Load data and train/load model done.
 2023-04-15 14:15:50,068     INFO                      Base: All done! Time elapsed: 11060.10689997673
+2023-04-15 15:17:13,791     INFO                      Base: data           : mimic
+2023-04-15 15:17:13,791     INFO                      Base: delay          : 0
+2023-04-15 15:17:13,791     INFO                      Base: explainer      : ['winit']
+2023-04-15 15:17:13,791     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-15 15:17:13,791     INFO                      Base: testbs         : -1
+2023-04-15 15:17:13,791     INFO                      Base: dataseed       : 1234
+2023-04-15 15:17:13,792     INFO                      Base: datapath       : None
+2023-04-15 15:17:13,792     INFO                      Base: explainerseed  : 2345
+2023-04-15 15:17:13,792     INFO                      Base: outpath        : ./output/
+2023-04-15 15:17:13,792     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-15 15:17:13,792     INFO                      Base: plotpath       : ./plots/
+2023-04-15 15:17:13,792     INFO                      Base: logpath        : ./logs/
+2023-04-15 15:17:13,792     INFO                      Base: resultfile     : results.csv
+2023-04-15 15:17:13,792     INFO                      Base: logfile        : None
+2023-04-15 15:17:13,792     INFO                      Base: train          : False
+2023-04-15 15:17:13,792     INFO                      Base: traingen       : True
+2023-04-15 15:17:13,792     INFO                      Base: skipexplain    : True
+2023-04-15 15:17:13,792     INFO                      Base: eval           : False
+2023-04-15 15:17:13,792     INFO                      Base: loglevel       : info
+2023-04-15 15:17:13,793     INFO                      Base: nondeterministic: False
+2023-04-15 15:17:13,793     INFO                      Base: hiddensize     : 200
+2023-04-15 15:17:13,793     INFO                      Base: batchsize      : 100
+2023-04-15 15:17:13,793     INFO                      Base: dropout        : 0.5
+2023-04-15 15:17:13,793     INFO                      Base: numlayers      : 1
+2023-04-15 15:17:13,793     INFO                      Base: modeltype      : gru
+2023-04-15 15:17:13,793     INFO                      Base: lr             : None
+2023-04-15 15:17:13,793     INFO                      Base: joint          : False
+2023-04-15 15:17:13,793     INFO                      Base: conditional    : False
+2023-04-15 15:17:13,793     INFO                      Base: area           : None
+2023-04-15 15:17:13,793     INFO                      Base: blurtype       : None
+2023-04-15 15:17:13,793     INFO                      Base: deletion       : None
+2023-04-15 15:17:13,793     INFO                      Base: sizereg        : None
+2023-04-15 15:17:13,793     INFO                      Base: timereg        : None
+2023-04-15 15:17:13,794     INFO                      Base: loss           : None
+2023-04-15 15:17:13,794     INFO                      Base: epoch          : 200
+2023-04-15 15:17:13,794     INFO                      Base: lastonly       : None
+2023-04-15 15:17:13,794     INFO                      Base: window         : [10]
+2023-04-15 15:17:13,794     INFO                      Base: winitmetric    : ['pd']
+2023-04-15 15:17:13,794     INFO                      Base: usedatadist    : False
+2023-04-15 15:17:13,794     INFO                      Base: samples        : -1
+2023-04-15 15:17:13,794     INFO                      Base: maskseed       : 43814
+2023-04-15 15:17:13,794     INFO                      Base: mask           : ['std', 'end']
+2023-04-15 15:17:13,794     INFO                      Base: top            : 50
+2023-04-15 15:17:13,794     INFO                      Base: toppc          : 0.05
+2023-04-15 15:17:13,794     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-15 15:17:13,794     INFO                      Base: aggregate      : ['mean']
+2023-04-15 15:17:20,349     INFO         ExplanationRunner: Average Accuracy = 0.9109±0.0015
+2023-04-15 15:17:20,349     INFO         ExplanationRunner: Model Accuracy on Tests = [0.909308, 0.913658, 0.909743, 0.910613, 0.911266].
+2023-04-15 15:17:20,349     INFO         ExplanationRunner: Average AUC = 0.8095±0.0024
+2023-04-15 15:17:20,349     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
+2023-04-15 15:17:20,349     INFO                      Base: Load data and train/load model done.
+2023-04-15 15:17:20,351     INFO                      Base: Training Generator...Data=mimic, Explainer=winit
+2023-04-15 15:17:20,351     INFO         ExplanationRunner: Training generator for cv=0
+2023-04-15 15:17:43,807     INFO          FeatureGenerator: 
+Epoch 0
+2023-04-15 15:17:43,807     INFO          FeatureGenerator: Generator Training Loss   ===> 0.43619692808872945
+2023-04-15 15:17:43,807     INFO          FeatureGenerator: Generator Validation Loss ===> 0.4512025101764782
+2023-04-15 15:17:43,811     INFO          FeatureGenerator: save ckpt:in epoch 0
+2023-04-15 15:18:08,460     INFO          FeatureGenerator: save ckpt:in epoch 1
