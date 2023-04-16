@@ -119,7 +119,7 @@ class FITExplainer:
         return score
 
 
-class FITs:
+class TFS:
     def __init__(self, model, activation=torch.nn.Softmax(-1)):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.base_model = model.to(self.device)

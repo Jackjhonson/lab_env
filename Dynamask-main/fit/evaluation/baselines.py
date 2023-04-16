@@ -21,7 +21,7 @@ from fit.TSX.explainers import (  # SHAPExplainer,
     LIMExplainer,
     MeanImpExplainer,
     RETAINexplainer,
-    FITs
+    TFS
 )
 from fit.TSX.generator import JointDistributionGenerator, JointFeatureGenerator
 from fit.TSX.models import RETAIN, EncoderRNN, StateClassifier, StateClassifierMIMIC
@@ -379,11 +379,11 @@ if __name__ == "__main__":
                 else:
                     explainer = FITExplainer(model, generator)
 
-        elif args.explainer == "fits":
+        elif args.explainer == "tfs":
             if args.data == "mimic_int" or args.data == "simulation_spike":
-                explainer = FITs(model, activation=activation)
+                explainer = TFS(model, activation=activation)
             else:
-                explainer = FITs(model)
+                explainer = TFS(model)
 
         elif args.explainer == "integrated_gradient":
             if args.data == "mimic_int" or args.data == "simulation_spike":
