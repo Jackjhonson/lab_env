@@ -2658,3 +2658,35 @@ Epoch 30
 2023-04-16 15:03:43,412     INFO          FeatureGenerator: save ckpt:in epoch 32
 2023-04-16 15:04:11,191     INFO          FeatureGenerator: save ckpt:in epoch 33
 2023-04-16 15:04:36,023     INFO          FeatureGenerator: save ckpt:in epoch 34
+2023-04-16 15:05:01,629     INFO          FeatureGenerator: save ckpt:in epoch 35
+2023-04-16 15:05:26,858     INFO          FeatureGenerator: save ckpt:in epoch 36
+2023-04-16 15:05:51,805     INFO          FeatureGenerator: save ckpt:in epoch 37
+2023-04-16 15:06:16,470     INFO          FeatureGenerator: save ckpt:in epoch 38
+2023-04-16 15:06:41,217     INFO          FeatureGenerator: save ckpt:in epoch 39
+2023-04-16 15:07:06,161     INFO          FeatureGenerator: 
+Epoch 40
+2023-04-16 15:07:06,161     INFO          FeatureGenerator: Generator Training Loss   ===> 0.04863775357906077
+2023-04-16 15:07:06,162     INFO          FeatureGenerator: Generator Validation Loss ===> 0.0633813361259731
+2023-04-16 15:07:06,164     INFO          FeatureGenerator: save ckpt:in epoch 40
+2023-04-16 15:07:30,776     INFO          FeatureGenerator: save ckpt:in epoch 41
+2023-04-16 15:07:57,945     INFO          FeatureGenerator: save ckpt:in epoch 42
+2023-04-16 15:08:23,786     INFO          FeatureGenerator: save ckpt:in epoch 43
+2023-04-16 15:08:48,981     INFO          FeatureGenerator: save ckpt:in epoch 44
+2023-04-16 15:09:16,847     INFO          FeatureGenerator: save ckpt:in epoch 45
+2023-04-16 15:09:43,696     INFO          FeatureGenerator: save ckpt:in epoch 46
+2023-04-16 15:10:08,580     INFO          FeatureGenerator: save ckpt:in epoch 47
+2023-04-16 15:10:35,747     INFO          FeatureGenerator: save ckpt:in epoch 48
+2023-04-16 15:11:00,195     INFO          FeatureGenerator: save ckpt:in epoch 49
+2023-04-16 15:11:25,562     INFO          FeatureGenerator: 
+Epoch 50
+2023-04-16 15:11:25,562     INFO          FeatureGenerator: Generator Training Loss   ===> 0.04748255105034725
+2023-04-16 15:11:25,562     INFO          FeatureGenerator: Generator Validation Loss ===> 0.062413769597942766
+2023-04-16 15:11:25,565     INFO          FeatureGenerator: save ckpt:in epoch 50
+2023-04-16 15:11:51,274     INFO          FeatureGenerator: save ckpt:in epoch 51
+2023-04-16 15:12:18,707     INFO          FeatureGenerator: save ckpt:in epoch 52
+2023-04-16 15:12:44,528     INFO          FeatureGenerator: save ckpt:in epoch 53
+2023-04-16 15:13:13,753     INFO          FeatureGenerator: save ckpt:in epoch 54
+2023-04-16 15:13:42,645     INFO          FeatureGenerator: save ckpt:in epoch 55
+2023-04-16 15:14:10,793     INFO          FeatureGenerator: save ckpt:in epoch 56
+2023-04-16 15:14:35,337     INFO          FeatureGenerator: save ckpt:in epoch 57
+2023-04-16 15:14:59,995     INFO          FeatureGenerator: save ckpt:in epoch 58
