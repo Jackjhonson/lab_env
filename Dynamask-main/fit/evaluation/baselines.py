@@ -21,6 +21,7 @@ from fit.TSX.explainers import (  # SHAPExplainer,
     LIMExplainer,
     MeanImpExplainer,
     RETAINexplainer,
+    FITs
 )
 from fit.TSX.generator import JointDistributionGenerator, JointFeatureGenerator
 from fit.TSX.models import RETAIN, EncoderRNN, StateClassifier, StateClassifierMIMIC
@@ -377,6 +378,12 @@ if __name__ == "__main__":
                     explainer = FITExplainer(model, generator, activation=torch.nn.Sigmoid())
                 else:
                     explainer = FITExplainer(model, generator)
+
+        elif args.explainer == "fits":
+            if args.data == "mimic_int" or args.data == "simulation_spike":
+                explainer = FITs(model, activation=activation)
+            else:
+                explainer = FITs(model)
 
         elif args.explainer == "integrated_gradient":
             if args.data == "mimic_int" or args.data == "simulation_spike":

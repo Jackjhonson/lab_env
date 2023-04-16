@@ -108,6 +108,41 @@ class FITExplainer:
                     score[:, i, t] = E_div
         return score
 
+class FITs:
+    def __init__(self, model, activation=torch.nn.Softmax(-1)):
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.base_model = model.to(self.device)
+        self.activation = activation
+
+    def attribute(self, x, y, n_samples=10, distance_metric='kl'):
+        """
+        Compute importance score for a sample x, over time and features
+        :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
+        :param n_samples: number of Monte-Carlo samples
+        :return: Importance score matrix of shape:[batch, features, time]
+        """
+        x = x.to(self.device)
+        _, n_features, t_len = x.shape
+        score = np.zeros(list(x.shape))
+
+        for t in range(1, t_len):
+
+            for i in range(n_features):
+                div_all=[]
+                for _ in range(n_samples):
+                    x_o = x[:,:,t].clone()
+                    z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
+                    x_o[:,i:] = z_o[:,i:]
+                    x_with_j = x_o
+                    x_o[:,i-1:] = z_o[:,i-1:]
+                    x_no_j = x_o
+                    y_with_j = self.activation(self.base_model(x_with_j))
+                    y_no_j = self.activation(self.base_model(x_no_j))
+                    div = torch.abs(y_with_j-y_no_j)
+                    div_all.append(np.mean(div.detach().cpu().numpy(), -1))
+                E_div = np.mean(np.array(div_all),axis=0)
+                score[:, i, t] = E_div
+        return score
 
 class FFCExplainer:
     def __init__(self, model, generator=None,activation=torch.nn.Softmax(-1)):
