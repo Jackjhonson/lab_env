@@ -140,12 +140,12 @@ class TFS:
 
             for i in range(n_features):
                 div_all=[]
+                x_o = x[:,:,0:t+1].clone()
                 for _ in range(n_samples):
-                    x_o = x[:,:,0:t].clone()
                     z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
-                    x_o[:,i+1:t] = z_o[:,i+1:]
+                    x_o[:,i+1,t] = z_o[:,i+1:]
                     x_with_j = x_o
-                    x_o[:,i:t] = z_o[:,i:]
+                    x_o[:,i,t] = z_o[:,i:]
                     x_no_j = x_o
                     y_with_j = self.activation(self.base_model(x_with_j))
                     y_no_j = self.activation(self.base_model(x_no_j))
@@ -230,6 +230,7 @@ class FOExplainer:
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(n_samples):
+                    # 将x_t时刻第i个特征进行替换，采样范围为均匀分布范围[-3,3)
                     x_hat[:, i, t] = torch.Tensor(
                         np.random.uniform(-3, +3, size=(len(x),))
                     )  # torch.Tensor(np.array([np.random.uniform(-3,+3)]).reshape(-1)).to(self.device)
@@ -273,6 +274,7 @@ class AFOExplainer:
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(10):
+                    # 从x的训练集特征分布中采样t时刻的特征i，
                     x_hat[:, i, t] = torch.Tensor(np.random.choice(feature_dist, size=(len(x),))).to(self.device)
                     y_hat_t = self.activation(self.base_model(x_hat))
                     # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)

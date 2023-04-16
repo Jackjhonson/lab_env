@@ -182,6 +182,7 @@ class FOExplainer(BaseExplainer):
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(self.n_samples):
+                    # 将x_t时刻第i个特征进行替换，采样范围为均匀分布范围[-3,3)
                     x_hat[:, i, t] = torch.Tensor(np.random.uniform(-3, +3, size=(len(x),)))
                     y_hat_t = self.base_model.predict(x_hat, return_all=False)
                     kl = torch.abs(y_hat_t - p_y_t)
@@ -219,9 +220,9 @@ class TFSExplainer(BaseExplainer):
                 for _ in range(n_samples):
                     x_o = x[:,:,0:t].clone()
                     z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
-                    x_o[:,i+1:t] = z_o[:,i+1:]
+                    x_o[:,i+1:,t] = z_o[:,i+1:]
                     x_with_j = x_o
-                    x_o[:,i:t] = z_o[:,i:]
+                    x_o[:,i:,t] = z_o[:,i:]
                     x_no_j = x_o
                     y_with_j = self.activation(self.base_model(x_with_j))
                     y_no_j = self.activation(self.base_model(x_no_j))
