@@ -125,7 +125,7 @@ class TFS:
         self.base_model = model.to(self.device)
         self.activation = activation
 
-    def attribute(self, x, y, n_samples=20, distance_metric='kl'):
+    def attribute(self, x, y, n_samples=10, distance_metric='kl'):
         """
         Compute importance score for a sample x, over time and features
         :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
