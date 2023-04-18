@@ -125,7 +125,7 @@ class TFS:
         self.base_model = model.to(self.device)
         self.activation = activation
 
-    def attribute(self, x, y, n_samples=10, distance_metric='kl'):
+    def attribute(self, x, y, n_samples=20, distance_metric='kl'):
         """
         Compute importance score for a sample x, over time and features
         :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
@@ -142,7 +142,7 @@ class TFS:
                 div_all=[]
                 x_o = x[:,:,0:t+1].clone()
                 for _ in range(n_samples):
-                    z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
+                    z_o = x[:,:,np.random.randint(0, x.shape[2], dtype='int')].clone()
                     x_o[:,i+1:,t] = z_o[:,i+1:]
                     x_with_j = x_o
                     x_o[:,i:,t] = z_o[:,i:]
@@ -270,6 +270,7 @@ class AFOExplainer:
             if not retrospective:
                 p_y_t = self.activation(self.base_model(x[:, :, : t + 1]))
             for i in range(n_features):
+                # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
                 feature_dist = np.array(self.data_distribution[:, i, :]).reshape(-1)
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
