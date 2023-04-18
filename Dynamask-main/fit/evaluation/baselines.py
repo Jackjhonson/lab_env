@@ -350,7 +350,7 @@ if __name__ == "__main__":
                     )
 
         model.load_state_dict(
-            torch.load(os.path.join("./experiments/results/%s/%s_%d.pt" % (data_name, "model", args.cv)))
+            torch.load(os.path.join("./experiments/results/%s/%s_%d.pt" % (data_name, "model", args.cv)),map_location='cpu')
         )
 
         if args.explainer == "fit":

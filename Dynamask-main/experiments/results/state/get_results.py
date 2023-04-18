@@ -64,7 +64,7 @@ def process_results(CV, explainers):
     )
 
     print(results_df)
-    results_df.to_csv(os.path.join(path, "state_benchmark.csv"))
+    results_df.to_csv("/home/lzy/lab/Dynamask-main/experiments/results/state/res/tfs.csv")
 
 
 if __name__ == "__main__":

@@ -143,9 +143,9 @@ class TFS:
                 x_o = x[:,:,0:t+1].clone()
                 for _ in range(n_samples):
                     z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
-                    x_o[:,i+1,t] = z_o[:,i+1:]
+                    x_o[:,i+1:,t] = z_o[:,i+1:]
                     x_with_j = x_o
-                    x_o[:,i,t] = z_o[:,i:]
+                    x_o[:,i:,t] = z_o[:,i:]
                     x_no_j = x_o
                     y_with_j = self.activation(self.base_model(x_with_j))
                     y_no_j = self.activation(self.base_model(x_no_j))
