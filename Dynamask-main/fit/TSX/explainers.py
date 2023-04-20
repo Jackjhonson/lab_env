@@ -140,9 +140,16 @@ class TFS:
 
             for i in range(n_features):
                 div_all=[]
+                # x_o = x[:,:,0:t+1].clone()
+                # for _ in range(n_samples):
+                #     z_o = x[:,:,np.random.randint(0, x.shape[2], dtype='int')].clone()
                 x_o = x[:,:,0:t+1].clone()
+                gap = 5
+                low = (t - gap) if (t - gap) > 0 else 0
+                high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
                 for _ in range(n_samples):
-                    z_o = x[:,:,np.random.randint(0, x.shape[2], dtype='int')].clone()
+                    range_list = np.random.randint(low, high, dtype='int')
+                    z_o = x[:,:,range_list].clone()    
                     x_o[:,i+1:,t] = z_o[:,i+1:]
                     x_with_j = x_o
                     x_o[:,i:,t] = z_o[:,i:]
