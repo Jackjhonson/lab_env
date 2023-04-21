@@ -383,7 +383,7 @@ if __name__ == "__main__":
             if args.data == "mimic_int" or args.data == "simulation_spike":
                 explainer = TFS(model, activation=activation)
             else:
-                explainer = TFS(model)
+                explainer = TFS(model, train_loader)
 
         elif args.explainer == "integrated_gradient":
             if args.data == "mimic_int" or args.data == "simulation_spike":
