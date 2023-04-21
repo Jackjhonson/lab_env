@@ -170,31 +170,39 @@ class TFS:
         self.data_distribution = torch.stack([x[0] for x in trainset]) # torch.stack()，沿着一个新维度对输入向量序列进行连接，增加新的维度堆叠已有张量（2->3,3->4）
         self.activation = activation
 
-    def attribute(self, x, y, retrospective=False):
+    def attribute(self, x, y):
         
         x = x.to(self.device)
         _, n_features, t_len = x.shape
         score = np.zeros(x.shape)
-        if retrospective:
-            p_y_t = self.activation(self.base_model(x))
+        
 
         for t in range(1, t_len):
-            if not retrospective:
-                p_y_t = self.activation(self.base_model(x[:, :, : t + 1]))
+            
             for i in range(n_features):
                 # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
                 x_hat_z = x[:, :, 0 : t + 1].clone()
                 x_hat_o = x[:, :, 0 : t + 1].clone()
                 kl_all = []
-                gap = 5
-                low = (t - gap) if (t - gap) > 0 else 0
-                high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+                # gap = 5
+                # low = (t - gap) if (t - gap) > 0 else 0
+                # high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+                x_with_i = self.data_distribution[:, i+1:, :]
+                x_with_i_trans = np.transpose(x_with_i, (0, 2, 1)).reshape(x_with_i.shape[0] * x_with_i.shape[2], -1)
+                x_no_i = self.data_distribution[:, i:, :]
+                x_no_i_trans = np.transpose(x_no_i, (0, 2, 1)).reshape(x_no_i.shape[0] * x_no_i.shape[2], -1)
                 for _ in range(10):
                     # 从x的训练集特征分布中采样t时刻的特征i，
-                    batch_dist = np.random.choice(x.shape[0],size=(len(x),))
-                    time_seed = np.random.randint(low, high, dtype='int')
-                    x_hat_z[:, i:, t] = self.data_distribution[batch_dist,i:,time_seed]
-                    x_hat_o[:, i+1:, t] = self.data_distribution[batch_dist,i+1:,time_seed]
+                    time_stamp = np.random.choice(x_with_i_trans.shape[0], size=(len(x),), replace=False)
+                    x_with_i = x_with_i_trans[time_stamp, :]
+                    x_no_i = x_no_i_trans[time_stamp, :]
+                    # print(x_with_i.shape)
+                    x_hat_o[:, i+1:, t] = x_with_i
+                    x_hat_z[:, i:, t] = x_no_i
+                    # batch_dist = np.random.choice(x.shape[0],size=(len(x),))
+                    # time_seed = np.random.randint(0, t_len, dtype='int')
+                    # x_hat_z[:, i:, t] = self.data_distribution[batch_dist,i:,time_seed]
+                    # x_hat_o[:, i+1:, t] = self.data_distribution[batch_dist,i+1:,time_seed]
                     y_hat_t = self.activation(self.base_model(x_hat_z))
                     y_hat_o = self.activation(self.base_model(x_hat_o))
                     # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)
