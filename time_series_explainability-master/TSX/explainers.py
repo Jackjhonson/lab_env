@@ -109,40 +109,83 @@ class FITExplainer:
         return score
 
 class TFS:
-    def __init__(self, model, activation=torch.nn.Softmax(-1)):
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    def __init__(self, model, train_loader, activation=torch.nn.Softmax(-1)):
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.base_model = model.to(self.device)
+        trainset = list(train_loader.dataset)
+        self.data_distribution = torch.stack([x[0] for x in trainset]) # torch.stack()，沿着一个新维度对输入向量序列进行连接，增加新的维度堆叠已有张量（2->3,3->4）
         self.activation = activation
 
-    def attribute(self, x, y, n_samples=10, distance_metric='kl'):
-        """
-        Compute importance score for a sample x, over time and features
-        :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
-        :param n_samples: number of Monte-Carlo samples
-        :return: Importance score matrix of shape:[batch, features, time]
-        """
+    def attribute(self, x, y, retrospective=False):
+        
         x = x.to(self.device)
         _, n_features, t_len = x.shape
-        score = np.zeros(list(x.shape))
+        score = np.zeros(x.shape)
+        if retrospective:
+            p_y_t = self.activation(self.base_model(x))
 
         for t in range(1, t_len):
-
+            if not retrospective:
+                p_y_t = self.activation(self.base_model(x[:, :, : t + 1]))
             for i in range(n_features):
-                div_all=[]
-                x_o = x[:,:,0:t+1].clone()
-                for _ in range(n_samples):
-                    z_o = x[:,:,np.random.randint(0, x.shape[1], dtype='int')].clone()
-                    x_o[:,i+1,t] = z_o[:,i+1:]
-                    x_with_j = x_o
-                    x_o[:,i,t] = z_o[:,i:]
-                    x_no_j = x_o
-                    y_with_j = self.activation(self.base_model(x_with_j))
-                    y_no_j = self.activation(self.base_model(x_no_j))
-                    div = torch.abs(y_with_j-y_no_j)
-                    div_all.append(np.mean(div.detach().cpu().numpy(), -1))
-                E_div = np.mean(np.array(div_all),axis=0)
-                score[:, i, t] = E_div
+                # # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
+                # x_hat_z = x[:, :, 0 : t + 1].clone()
+                # x_hat_o = x[:, :, 0 : t + 1].clone()
+                # kl_all = []
+                # gap = 5
+                # low = (t - gap) if (t - gap) > 0 else 0
+                # high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+                # for _ in range(10):
+                #     # 从x的训练集特征分布中采样t时刻的特征i，
+                #     batch_dist = np.random.choice(x.shape[0],size=(len(x),))
+                #     time_seed = np.random.randint(low, high,dtype='int')
+                #     x_hat_z[:, i:, t] = self.data_distribution[batch_dist,i:,time_seed]
+                #     x_hat_o[:, i+1:, t] = self.data_distribution[batch_dist,i+1:,time_seed]
+                #     y_hat_t = self.activation(self.base_model(x_hat_z))
+                #     y_hat_o = self.activation(self.base_model(x_hat_o))
+                #     # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)
+                #     kl = torch.abs((y_hat_t) - (y_hat_o))
+                #     # kl_all.append(torch.sum(kl, -1).cpu().detach().numpy())
+                #     kl_all.append(np.mean(kl.detach().cpu().numpy(), -1))
+                # E_kl = np.mean(np.array(kl_all), axis=0)
+                # # score[:, i, t] = 2./(1+np.exp(-1*E_kl)) - 1.
+                # score[:, i, t] = E_kl
+                # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
+                x_hat_z = x[:, :, 0 : t + 1].clone()
+                x_hat_o = x[:, :, 0 : t + 1].clone()
+                kl_all = []
+                # gap = 5
+                # low = (t - gap) if (t - gap) > 0 else 0
+                # high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+                x_with_i = self.data_distribution[:, i+1:, :]
+                # print(x_with_i.shape) # torch.Size([512, 2, 200]), torch.Size([512, 1, 200]), torch.Size([512, 0, 200])
+                x_with_i_trans = np.transpose(x_with_i, (0, 2, 1)).reshape(x_with_i.shape[0] * x_with_i.shape[2], -1)
+                # print(x_with_i_trans.shape) # torch.Size([102400, 2]), torch.Size([102400, 1]), torch.Size([102400, 0])
+                x_no_i = self.data_distribution[:, i:, :]
+                x_no_i_trans = np.transpose(x_no_i, (0, 2, 1)).reshape(x_no_i.shape[0] * x_no_i.shape[2], -1)
+                for _ in range(10):
+                    # 从x的训练集特征分布中采样t时刻的特征i，
+                    time_stamp = np.random.choice(x_with_i_trans.shape[0], size=(len(x),), replace=False)
+                    # print(time_stamp, time_stamp.shape) # (200,)
+                    x_hat_o[:, i+1:, t] = x_with_i_trans[time_stamp, :]
+                    # print(x_with_i_trans.shape) # torch.Size([102400, 2]), torch.Size([102400, 1]), torch.Size([102400, 0])交替采样，10个之后变换。
+                    x_hat_z[:, i:, t] = x_no_i_trans[time_stamp, :]
+                    # batch_dist = np.random.choice(x.shape[0],size=(len(x),))
+                    # time_seed = np.random.randint(0, t_len, dtype='int')
+                    # x_hat_z[:, i:, t] = self.data_distribution[batch_dist,i:,time_seed]
+                    # x_hat_o[:, i+1:, t] = self.data_distribution[batch_dist,i+1:,time_seed]
+                    y_hat_z = self.activation(self.base_model(x_hat_z))
+                    y_hat_o = self.activation(self.base_model(x_hat_o))
+                    # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)
+                    kl = torch.abs((y_hat_z) - (y_hat_o))
+                    # kl_all.append(torch.sum(kl, -1).cpu().detach().numpy())
+                    kl_all.append(np.mean(kl.detach().cpu().numpy(), -1))
+                E_kl = np.mean(np.array(kl_all), axis=0)
+                # score[:, i, t] = 2./(1+np.exp(-1*E_kl)) - 1.
+                score[:, i, t] = E_kl
         return score
+    
+
 
 class FFCExplainer:
     def __init__(self, model, generator=None,activation=torch.nn.Softmax(-1)):

@@ -18,7 +18,7 @@ from TSX.models import StateClassifier, RETAIN, EncoderRNN, ConvClassifier, Stat
 from TSX.generator import JointFeatureGenerator, JointDistributionGenerator
 from TSX.explainers import RETAINexplainer, FITExplainer, IGExplainer, FFCExplainer, \
     DeepLiftExplainer, GradientShapExplainer, AFOExplainer, FOExplainer, SHAPExplainer, \
-    LIMExplainer, CarryForwardExplainer, MeanImpExplainer
+    LIMExplainer, CarryForwardExplainer, MeanImpExplainer, TFS
 from sklearn import metrics
 
 
@@ -212,6 +212,12 @@ if __name__ == '__main__':
                 explainer = DeepLiftExplainer(model, activation=activation)
             else:
                 explainer = DeepLiftExplainer(model)
+
+        elif args.explainer == "tfs":
+            if args.data == "mimic_int" or args.data == "simulation_spike":
+                explainer = TFS(model, train_loader, activation=activation)
+            else:
+                explainer = TFS(model, train_loader)
 
         elif args.explainer == 'fo':
             if args.data=='mimic_int' or args.data=='simulation_spike':
