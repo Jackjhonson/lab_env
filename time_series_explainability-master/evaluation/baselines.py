@@ -302,6 +302,7 @@ if __name__ == '__main__':
         ranked_feats.append(ranked_features)
 
     importance_scores = np.concatenate(importance_scores, 0)
+    np.nan_to_num(importance_scores, copy=False)
     print('Saving file to ', os.path.join(output_path, '%s_test_importance_scores_%d.pkl' % (args.explainer, args.cv)))
     with open(os.path.join(output_path, '%s_test_importance_scores_%d.pkl' % (args.explainer, args.cv)), 'wb') as f:
         pkl.dump(importance_scores, f, protocol=pkl.HIGHEST_PROTOCOL)

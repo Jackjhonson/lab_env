@@ -1,0 +1,194 @@
+Traceback (most recent call last):
+  File "/home/lzy/anaconda3/envs/fit/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/lzy/anaconda3/envs/fit/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lzy/lab/time_series_explainability-master/evaluation/baselines.py", line 321, in <module>
+    auc_score = metrics.roc_auc_score(gt_score, explainer_score)
+  File "/home/lzy/anaconda3/envs/fit/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 546, in roc_auc_score
+    y_score = check_array(y_score, ensure_2d=False)
+  File "/home/lzy/anaconda3/envs/fit/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/home/lzy/anaconda3/envs/fit/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+cv :  0
+Training black-box model on  simulation_spike
+
+Epoch 0
+Training ===>loss:  0.5935268752276898  Accuracy: 74.13 percent  AUC: 0.54
+Test ===>loss:  0.49127868600189684  Accuracy: 79.86 percent  AUC: 0.63
+
+Epoch 10
+Training ===>loss:  0.06985261529916897  Accuracy: 98.51 percent  AUC: 0.99
+Test ===>loss:  1.3533957976847888  Accuracy: 63.95 percent  AUC: 1.00
+
+Epoch 20
+Training ===>loss:  0.02274707711476367  Accuracy: 99.65 percent  AUC: 1.00
+Test ===>loss:  5.859143085684627  Accuracy: 67.07 percent  AUC: 1.00
+
+Epoch 30
+Training ===>loss:  0.01439794780962984  Accuracy: 99.75 percent  AUC: 1.00
+Test ===>loss:  3.0011993765365332  Accuracy: 78.71 percent  AUC: 1.00
+
+Epoch 40
+Training ===>loss:  0.009205256548011676  Accuracy: 99.85 percent  AUC: 1.00
+Test ===>loss:  2.538960095337825  Accuracy: 75.73 percent  AUC: 1.00
+Test AUC:  0.999902402928659
+data name in generator: simulation_spike
+saving ckpt
+
+Epoch 0
+Training ===>loss:  11190.533569335938
+Test ===>loss:  9903.4970703125
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 10
+Training ===>loss:  3643.8057556152344
+Test ===>loss:  3255.463134765625
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 20
+Training ===>loss:  1676.8972778320312
+Test ===>loss:  1606.3968505859375
+saving ckpt
+saving ckpt
+
+Epoch 30
+Training ===>loss:  1304.023666381836
+Test ===>loss:  725.046875
+
+Epoch 40
+Training ===>loss:  550.8201942443848
+Test ===>loss:  415.639892578125
+
+Epoch 50
+Training ===>loss:  498.07299423217773
+Test ===>loss:  403.1370544433594
+
+Epoch 60
+Training ===>loss:  868.1965713500977
+Test ===>loss:  384.2408752441406
+saving ckpt
+
+Epoch 70
+Training ===>loss:  488.55582427978516
+Test ===>loss:  241.28395080566406
+saving ckpt
+saving ckpt
+
+Epoch 80
+Training ===>loss:  251.08265495300293
+Test ===>loss:  279.2169189453125
+
+Epoch 90
+Training ===>loss:  114.79050922393799
+Test ===>loss:  107.47441864013672
+saving ckpt
+
+Epoch 100
+Training ===>loss:  104.05516183376312
+Test ===>loss:  60.56536865234375
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 110
+Training ===>loss:  172.61082649230957
+Test ===>loss:  41.193885803222656
+
+Epoch 120
+Training ===>loss:  184.02382016181946
+Test ===>loss:  121.4679946899414
+
+Epoch 130
+Training ===>loss:  151.55866813659668
+Test ===>loss:  310.0583190917969
+
+Epoch 140
+Training ===>loss:  107.47547340393066
+Test ===>loss:  97.50676727294922
+
+Epoch 150
+Training ===>loss:  28.483364641666412
+Test ===>loss:  24.47289276123047
+
+Epoch 160
+Training ===>loss:  11.135327368974686
+Test ===>loss:  16.140459060668945
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 170
+Training ===>loss:  10.025859415531158
+Test ===>loss:  5.062790393829346
+saving ckpt
+
+Epoch 180
+Training ===>loss:  9.195760071277618
+Test ===>loss:  31.559553146362305
+saving ckpt
+saving ckpt
+
+Epoch 190
+Training ===>loss:  7.446500152349472
+Test ===>loss:  3.5644521713256836
+saving ckpt
+
+Epoch 200
+Training ===>loss:  20.329153895378113
+Test ===>loss:  41.5455436706543
+
+Epoch 210
+Training ===>loss:  14.06759238243103
+Test ===>loss:  25.569231033325195
+
+Epoch 220
+Training ===>loss:  13.221644908189774
+Test ===>loss:  3.2960634231567383
+
+Epoch 230
+Training ===>loss:  29.20429539680481
+Test ===>loss:  3.391801118850708
+saving ckpt
+
+Epoch 240
+Training ===>loss:  31.937420338392258
+Test ===>loss:  3.0162181854248047
+saving ckpt
+
+Epoch 250
+Training ===>loss:  3.1977515816688538
+Test ===>loss:  6.625748157501221
+
+Epoch 260
+Training ===>loss:  5.361167997121811
+Test ===>loss:  3.2965872287750244
+
+Epoch 270
+Training ===>loss:  4.93574845790863
+Test ===>loss:  3.149623155593872
+
+Epoch 280
+Training ===>loss:  11.734131872653961
+Test ===>loss:  10.030953407287598
+
+Epoch 290
+Training ===>loss:  8.226447463035583
+Test ===>loss:  3.8499791622161865
+
+Epoch 300
+Training ===>loss:  7.137992262840271
+Test ===>loss:  3.4082796573638916
+***** Joint generator test loss ***** 3.4082796573638916
+Saving file to  ./output/fit_test_importance_scores_0.pkl
+
