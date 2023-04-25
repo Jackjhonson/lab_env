@@ -192,3 +192,692 @@ Test ===>loss:  3.4082796573638916
 ***** Joint generator test loss ***** 3.4082796573638916
 Saving file to  ./output/fit_test_importance_scores_0.pkl
 
+cv :  0
+Saving file to  ./output/fit_test_importance_scores_0.pkl
+auc: 0.9945714811540837  aupr: 0.3258144213578578
+cv :  1
+Training black-box model on  simulation_spike
+
+Epoch 0
+Training ===>loss:  0.592541228607297  Accuracy: 73.56 percent  AUC: 0.56
+Test ===>loss:  0.48218504413962365  Accuracy: 80.48 percent  AUC: 0.62
+
+Epoch 10
+Training ===>loss:  0.06150949443690479  Accuracy: 98.86 percent  AUC: 0.99
+Test ===>loss:  4.013219180703163  Accuracy: 26.00 percent  AUC: 0.99
+
+Epoch 20
+Training ===>loss:  0.02688306995551102  Accuracy: 99.56 percent  AUC: 1.00
+Test ===>loss:  0.723419822845608  Accuracy: 69.44 percent  AUC: 1.00
+
+Epoch 30
+Training ===>loss:  0.014720879025844624  Accuracy: 99.79 percent  AUC: 1.00
+Test ===>loss:  5.412883198261261  Accuracy: 20.61 percent  AUC: 1.00
+
+Epoch 40
+Training ===>loss:  0.009076313509467582  Accuracy: 99.89 percent  AUC: 1.00
+Test ===>loss:  0.03163330859388225  Accuracy: 98.71 percent  AUC: 1.00
+Test AUC:  0.9999979533360623
+data name in generator: simulation_spike
+saving ckpt
+
+Epoch 0
+Training ===>loss:  6853.803039550781
+Test ===>loss:  7155.46630859375
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 10
+Training ===>loss:  1335.8904418945312
+Test ===>loss:  921.2294311523438
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 20
+Training ===>loss:  458.69222831726074
+Test ===>loss:  360.2989807128906
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 30
+Training ===>loss:  213.99033403396606
+Test ===>loss:  66.002685546875
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 40
+Training ===>loss:  99.00746870040894
+Test ===>loss:  139.5344696044922
+saving ckpt
+
+Epoch 50
+Training ===>loss:  55.86684900522232
+Test ===>loss:  57.82594299316406
+saving ckpt
+
+Epoch 60
+Training ===>loss:  54.87816625833511
+Test ===>loss:  101.768798828125
+saving ckpt
+
+Epoch 70
+Training ===>loss:  80.42424154281616
+Test ===>loss:  18.986896514892578
+
+Epoch 80
+Training ===>loss:  132.2520203590393
+Test ===>loss:  66.45433807373047
+saving ckpt
+
+Epoch 90
+Training ===>loss:  106.04016923904419
+Test ===>loss:  57.89439392089844
+saving ckpt
+
+Epoch 100
+Training ===>loss:  32.39631050825119
+Test ===>loss:  11.066346168518066
+saving ckpt
+
+Epoch 110
+Training ===>loss:  23.55587139725685
+Test ===>loss:  10.514790534973145
+
+Epoch 120
+Training ===>loss:  9.911787688732147
+Test ===>loss:  19.8005428314209
+
+Epoch 130
+Training ===>loss:  63.48422312736511
+Test ===>loss:  25.36083984375
+
+Epoch 140
+Training ===>loss:  81.62446093559265
+Test ===>loss:  43.80414962768555
+saving ckpt
+
+Epoch 150
+Training ===>loss:  103.69676542282104
+Test ===>loss:  23.418615341186523
+
+Epoch 160
+Training ===>loss:  51.43134620785713
+Test ===>loss:  49.80021286010742
+
+Epoch 170
+Training ===>loss:  62.664730489254
+Test ===>loss:  37.300628662109375
+
+Epoch 180
+Training ===>loss:  10.404689252376556
+Test ===>loss:  27.266616821289062
+
+Epoch 190
+Training ===>loss:  62.81705045700073
+Test ===>loss:  245.0449981689453
+
+Epoch 200
+Training ===>loss:  6.814372479915619
+Test ===>loss:  3.4341278076171875
+
+Epoch 210
+Training ===>loss:  6.406843811273575
+Test ===>loss:  7.03895902633667
+
+Epoch 220
+Training ===>loss:  3.809120088815689
+Test ===>loss:  3.351015090942383
+saving ckpt
+
+Epoch 230
+Training ===>loss:  5.227311700582504
+Test ===>loss:  3.1822712421417236
+
+Epoch 240
+Training ===>loss:  4.130051255226135
+Test ===>loss:  3.909477949142456
+
+Epoch 250
+Training ===>loss:  5.40958309173584
+Test ===>loss:  13.893559455871582
+
+Epoch 260
+Training ===>loss:  37.66776344180107
+Test ===>loss:  47.04904556274414
+
+Epoch 270
+Training ===>loss:  404.5438165664673
+Test ===>loss:  526.6257934570312
+
+Epoch 280
+Training ===>loss:  60.11748746037483
+Test ===>loss:  5.875936031341553
+
+Epoch 290
+Training ===>loss:  15.655331701040268
+Test ===>loss:  3.6943705081939697
+
+Epoch 300
+Training ===>loss:  3.3268348574638367
+Test ===>loss:  3.5594494342803955
+***** Joint generator test loss ***** 3.5594494342803955
+Saving file to  ./output/fit_test_importance_scores_1.pkl
+auc: 0.9879631945196539  aupr: 0.3546004860354639
+cv :  2
+Training black-box model on  simulation_spike
+
+Epoch 0
+Training ===>loss:  0.6086820850148797  Accuracy: 70.61 percent  AUC: 0.54
+Test ===>loss:  0.5629293762147427  Accuracy: 78.67 percent  AUC: 0.61
+
+Epoch 10
+Training ===>loss:  0.059849545371253046  Accuracy: 98.99 percent  AUC: 1.00
+Test ===>loss:  6.945945277996361  Accuracy: 68.06 percent  AUC: 1.00
+
+Epoch 20
+Training ===>loss:  0.025196646040421912  Accuracy: 99.60 percent  AUC: 1.00
+Test ===>loss:  3.8063349895179273  Accuracy: 80.96 percent  AUC: 1.00
+
+Epoch 30
+Training ===>loss:  0.015677226259867894  Accuracy: 99.75 percent  AUC: 1.00
+Test ===>loss:  8.197513821418397  Accuracy: 68.22 percent  AUC: 1.00
+
+Epoch 40
+Training ===>loss:  0.012897965644151554  Accuracy: 99.77 percent  AUC: 1.00
+Test ===>loss:  8.644127436802956  Accuracy: 65.69 percent  AUC: 1.00
+Test AUC:  1.0
+data name in generator: simulation_spike
+saving ckpt
+
+Epoch 0
+Training ===>loss:  4985.697204589844
+Test ===>loss:  4997.48095703125
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 10
+Training ===>loss:  1181.2947463989258
+Test ===>loss:  929.6995239257812
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 20
+Training ===>loss:  196.07355964183807
+Test ===>loss:  116.28937530517578
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 30
+Training ===>loss:  81.18565273284912
+Test ===>loss:  10.931706428527832
+
+Epoch 40
+Training ===>loss:  213.6222219467163
+Test ===>loss:  527.5158081054688
+
+Epoch 50
+Training ===>loss:  165.45355367660522
+Test ===>loss:  145.8332977294922
+
+Epoch 60
+Training ===>loss:  75.71524393558502
+Test ===>loss:  63.02511215209961
+saving ckpt
+saving ckpt
+
+Epoch 70
+Training ===>loss:  6.200127303600311
+Test ===>loss:  10.639519691467285
+saving ckpt
+saving ckpt
+
+Epoch 80
+Training ===>loss:  5.507790744304657
+Test ===>loss:  5.1696248054504395
+
+Epoch 90
+Training ===>loss:  9.507686734199524
+Test ===>loss:  9.935522079467773
+
+Epoch 100
+Training ===>loss:  20.660788416862488
+Test ===>loss:  214.1754913330078
+
+Epoch 110
+Training ===>loss:  32.91755199432373
+Test ===>loss:  11.635058403015137
+saving ckpt
+
+Epoch 120
+Training ===>loss:  121.95643711090088
+Test ===>loss:  235.54197692871094
+
+Epoch 130
+Training ===>loss:  64.61466759443283
+Test ===>loss:  15.52014446258545
+
+Epoch 140
+Training ===>loss:  51.89592742919922
+Test ===>loss:  23.42131996154785
+
+Epoch 150
+Training ===>loss:  121.42201375961304
+Test ===>loss:  30.88503074645996
+
+Epoch 160
+Training ===>loss:  14.172925740480423
+Test ===>loss:  7.9582390785217285
+saving ckpt
+
+Epoch 170
+Training ===>loss:  14.141744583845139
+Test ===>loss:  12.841753959655762
+
+Epoch 180
+Training ===>loss:  9.016908437013626
+Test ===>loss:  10.49386978149414
+
+Epoch 190
+Training ===>loss:  15.883790135383606
+Test ===>loss:  11.038931846618652
+
+Epoch 200
+Training ===>loss:  21.197915971279144
+Test ===>loss:  82.8849868774414
+
+Epoch 210
+Training ===>loss:  35.6300590634346
+Test ===>loss:  36.222930908203125
+
+Epoch 220
+Training ===>loss:  5.604362726211548
+Test ===>loss:  7.446119785308838
+
+Epoch 230
+Training ===>loss:  5.998497366905212
+Test ===>loss:  5.543846130371094
+
+Epoch 240
+Training ===>loss:  7.930111646652222
+Test ===>loss:  6.362115859985352
+
+Epoch 250
+Training ===>loss:  6.175162672996521
+Test ===>loss:  4.890795707702637
+
+Epoch 260
+Training ===>loss:  9.498466730117798
+Test ===>loss:  9.73786449432373
+
+Epoch 270
+Training ===>loss:  4.60642409324646
+Test ===>loss:  4.509700298309326
+
+Epoch 280
+Training ===>loss:  6.480942785739899
+Test ===>loss:  13.497745513916016
+
+Epoch 290
+Training ===>loss:  12.606861352920532
+Test ===>loss:  25.369413375854492
+
+Epoch 300
+Training ===>loss:  152.99103260040283
+Test ===>loss:  37.699859619140625
+***** Joint generator test loss ***** 37.699859619140625
+Saving file to  ./output/fit_test_importance_scores_2.pkl
+auc: 0.9750441758332626  aupr: 0.29634913018866016
+cv :  3
+Training black-box model on  simulation_spike
+
+Epoch 0
+Training ===>loss:  0.5964215753600002  Accuracy: 74.09 percent  AUC: 0.54
+Test ===>loss:  0.5730964049696923  Accuracy: 76.33 percent  AUC: 0.63
+
+Epoch 10
+Training ===>loss:  0.06872257597278804  Accuracy: 98.48 percent  AUC: 0.99
+Test ===>loss:  2.5099336758255957  Accuracy: 59.27 percent  AUC: 1.00
+
+Epoch 20
+Training ===>loss:  0.023449325624096674  Accuracy: 99.69 percent  AUC: 1.00
+Test ===>loss:  6.724926519393921  Accuracy: 23.76 percent  AUC: 1.00
+
+Epoch 30
+Training ===>loss:  0.011564331912813941  Accuracy: 99.89 percent  AUC: 1.00
+Test ===>loss:  0.9384577651042492  Accuracy: 63.74 percent  AUC: 1.00
+
+Epoch 40
+Training ===>loss:  0.0077010735531075625  Accuracy: 99.92 percent  AUC: 1.00
+Test ===>loss:  0.02039585419697687  Accuracy: 99.41 percent  AUC: 1.00
+Test AUC:  0.9998021108179419
+data name in generator: simulation_spike
+saving ckpt
+
+Epoch 0
+Training ===>loss:  6657.836242675781
+Test ===>loss:  7156.49853515625
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 10
+Training ===>loss:  1337.8865051269531
+Test ===>loss:  1041.21923828125
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 20
+Training ===>loss:  569.5084924697876
+Test ===>loss:  563.9345092773438
+
+Epoch 30
+Training ===>loss:  514.9062461853027
+Test ===>loss:  318.0381774902344
+saving ckpt
+saving ckpt
+
+Epoch 40
+Training ===>loss:  156.41647148132324
+Test ===>loss:  90.69164276123047
+saving ckpt
+
+Epoch 50
+Training ===>loss:  97.11364483833313
+Test ===>loss:  68.87552642822266
+
+Epoch 60
+Training ===>loss:  50.88668555021286
+Test ===>loss:  556.9323120117188
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 70
+Training ===>loss:  168.3944535255432
+Test ===>loss:  17.799179077148438
+saving ckpt
+
+Epoch 80
+Training ===>loss:  28.62408435344696
+Test ===>loss:  14.581034660339355
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 90
+Training ===>loss:  32.566650688648224
+Test ===>loss:  6.028162479400635
+
+Epoch 100
+Training ===>loss:  14.678680151700974
+Test ===>loss:  27.513071060180664
+saving ckpt
+saving ckpt
+
+Epoch 110
+Training ===>loss:  15.337773084640503
+Test ===>loss:  4.4776129722595215
+
+Epoch 120
+Training ===>loss:  11.579170107841492
+Test ===>loss:  21.257780075073242
+
+Epoch 130
+Training ===>loss:  14.110293686389923
+Test ===>loss:  21.387880325317383
+saving ckpt
+
+Epoch 140
+Training ===>loss:  22.284085363149643
+Test ===>loss:  47.605403900146484
+
+Epoch 150
+Training ===>loss:  6.495340704917908
+Test ===>loss:  242.32733154296875
+saving ckpt
+
+Epoch 160
+Training ===>loss:  20.53300914168358
+Test ===>loss:  16.901649475097656
+
+Epoch 170
+Training ===>loss:  27.605071783065796
+Test ===>loss:  90.57760620117188
+
+Epoch 180
+Training ===>loss:  42.968120098114014
+Test ===>loss:  28.89215660095215
+
+Epoch 190
+Training ===>loss:  3.922116667032242
+Test ===>loss:  13.308780670166016
+saving ckpt
+saving ckpt
+
+Epoch 200
+Training ===>loss:  3.958467811346054
+Test ===>loss:  3.3325717449188232
+
+Epoch 210
+Training ===>loss:  5.905497819185257
+Test ===>loss:  5.792608737945557
+
+Epoch 220
+Training ===>loss:  17.54705920815468
+Test ===>loss:  6.206268787384033
+
+Epoch 230
+Training ===>loss:  14.381349176168442
+Test ===>loss:  23.182348251342773
+
+Epoch 240
+Training ===>loss:  29.02978080511093
+Test ===>loss:  21.52711296081543
+
+Epoch 250
+Training ===>loss:  24.81999921798706
+Test ===>loss:  8.519579887390137
+
+Epoch 260
+Training ===>loss:  10.412866741418839
+Test ===>loss:  5.56096076965332
+
+Epoch 270
+Training ===>loss:  15.924452006816864
+Test ===>loss:  4.273594856262207
+
+Epoch 280
+Training ===>loss:  10.862409979104996
+Test ===>loss:  9.745893478393555
+
+Epoch 290
+Training ===>loss:  4.83761939406395
+Test ===>loss:  67.92088317871094
+
+Epoch 300
+Training ===>loss:  7.360707610845566
+Test ===>loss:  16.1663875579834
+***** Joint generator test loss ***** 16.1663875579834
+Saving file to  ./output/fit_test_importance_scores_3.pkl
+auc: 0.994625197394033  aupr: 0.3608228951440673
+cv :  4
+Training black-box model on  simulation_spike
+
+Epoch 0
+Training ===>loss:  0.5806867415085435  Accuracy: 75.32 percent  AUC: 0.54
+Test ===>loss:  0.5519359461963177  Accuracy: 79.14 percent  AUC: 0.62
+
+Epoch 10
+Training ===>loss:  0.05511411864426918  Accuracy: 99.01 percent  AUC: 0.99
+Test ===>loss:  2.8336656410247087  Accuracy: 38.76 percent  AUC: 1.00
+
+Epoch 20
+Training ===>loss:  0.02782761370181106  Accuracy: 99.46 percent  AUC: 1.00
+Test ===>loss:  0.037114197434857485  Accuracy: 98.89 percent  AUC: 1.00
+
+Epoch 30
+Training ===>loss:  0.01316946616061614  Accuracy: 99.84 percent  AUC: 1.00
+Test ===>loss:  2.8552593132015316  Accuracy: 47.01 percent  AUC: 1.00
+
+Epoch 40
+Training ===>loss:  0.011165953145973618  Accuracy: 99.78 percent  AUC: 1.00
+Test ===>loss:  0.023696019989438356  Accuracy: 99.90 percent  AUC: 1.00
+Test AUC:  1.0
+data name in generator: simulation_spike
+saving ckpt
+
+Epoch 0
+Training ===>loss:  2102.3036193847656
+Test ===>loss:  2051.635009765625
+saving ckpt
+
+Epoch 10
+Training ===>loss:  3928.4436645507812
+Test ===>loss:  3595.550537109375
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 20
+Training ===>loss:  165.58126258850098
+Test ===>loss:  481.9415588378906
+saving ckpt
+saving ckpt
+saving ckpt
+saving ckpt
+
+Epoch 30
+Training ===>loss:  132.56812262535095
+Test ===>loss:  23.832521438598633
+
+Epoch 40
+Training ===>loss:  556.0848894119263
+Test ===>loss:  157.2142791748047
+saving ckpt
+
+Epoch 50
+Training ===>loss:  32.57001167535782
+Test ===>loss:  6.036319255828857
+
+Epoch 60
+Training ===>loss:  19.799588829278946
+Test ===>loss:  32.5612907409668
+
+Epoch 70
+Training ===>loss:  21.777075052261353
+Test ===>loss:  10.029688835144043
+
+Epoch 80
+Training ===>loss:  30.667945444583893
+Test ===>loss:  19.2940673828125
+saving ckpt
+
+Epoch 90
+Training ===>loss:  29.052552342414856
+Test ===>loss:  8.162562370300293
+
+Epoch 100
+Training ===>loss:  26.745942771434784
+Test ===>loss:  14.298179626464844
+
+Epoch 110
+Training ===>loss:  98.50479102134705
+Test ===>loss:  23.88483428955078
+
+Epoch 120
+Training ===>loss:  153.91175365447998
+Test ===>loss:  126.36968231201172
+
+Epoch 130
+Training ===>loss:  67.8295545578003
+Test ===>loss:  38.09218978881836
+
+Epoch 140
+Training ===>loss:  90.35183733701706
+Test ===>loss:  189.38356018066406
+
+Epoch 150
+Training ===>loss:  83.0495216846466
+Test ===>loss:  28.039657592773438
+
+Epoch 160
+Training ===>loss:  34.48134019970894
+Test ===>loss:  7.786521911621094
+saving ckpt
+
+Epoch 170
+Training ===>loss:  57.48752322793007
+Test ===>loss:  24.854841232299805
+
+Epoch 180
+Training ===>loss:  45.811364471912384
+Test ===>loss:  75.97506713867188
+saving ckpt
+
+Epoch 190
+Training ===>loss:  25.150723308324814
+Test ===>loss:  6.9342122077941895
+
+Epoch 200
+Training ===>loss:  7.159731417894363
+Test ===>loss:  4.490746021270752
+saving ckpt
+
+Epoch 210
+Training ===>loss:  4.0888970494270325
+Test ===>loss:  3.8785343170166016
+
+Epoch 220
+Training ===>loss:  10.89495649933815
+Test ===>loss:  42.02885437011719
+saving ckpt
+
+Epoch 230
+Training ===>loss:  3.5849784910678864
+Test ===>loss:  3.551841974258423
+
+Epoch 240
+Training ===>loss:  3.6662485003471375
+Test ===>loss:  3.7929489612579346
+
+Epoch 250
+Training ===>loss:  73.32649230957031
+Test ===>loss:  312.04742431640625
+
+Epoch 260
+Training ===>loss:  8.5154889523983
+Test ===>loss:  4.39335823059082
+saving ckpt
+
+Epoch 270
+Training ===>loss:  10.594120353460312
+Test ===>loss:  3.8019936084747314
+saving ckpt
+
+Epoch 280
+Training ===>loss:  5.518990606069565
+Test ===>loss:  12.126033782958984
+
+Epoch 290
+Training ===>loss:  8.386815369129181
+Test ===>loss:  9.965802192687988
+
+Epoch 300
+Training ===>loss:  7.029458671808243
+Test ===>loss:  9.893773078918457
+***** Joint generator test loss ***** 9.893773078918457
+Saving file to  ./output/fit_test_importance_scores_4.pkl
+auc: 0.9945430565962903  aupr: 0.2526430295617423
