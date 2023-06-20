@@ -461,3 +461,264 @@ X = torch.linalg.solve(A, B) (Triggered internally at  ../aten/src/ATen/native/B
 2023-04-25 15:10:14,015  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
 2023-04-25 15:10:19,049  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
 2023-04-25 15:10:23,277  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:38,836  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:04,128  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:11,346  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:39,408  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:55,473  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:05,444  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:12,233  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:15,191  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:35,691  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:52,584  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:55,350  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:04,054  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:10,196  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:13,275  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:42,701  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:48,900  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:58,298  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:14:03,586  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:00,252  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:33,810  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:55,422  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 3 index.
+2023-04-25 15:16:30,726  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:16:34,263  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:16:49,557  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:18:26,027  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:19:05,541  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:19:21,194  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:20:18,748  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:10,849  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:16,658  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:38,875  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:54,721  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:22:59,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:24:12,929  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:18,375  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:19,768  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:43,170  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:54,173  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:26:00,471  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:26:48,578  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:27:10,245  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:28:07,041  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:29:14,294  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:29:42,460  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:30:01,671  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:30:07,041  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:30:48,886  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:32:02,395  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:32:41,970     INFO              FITExplainer: attribute done
+2023-04-25 15:33:01,024  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:11,375  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:17,766  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:32,846  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:38,210  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:39,732  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:40,215  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:57,870  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:23,819  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:32,265  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:40,251  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:40,817  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:56,836  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:35:08,069  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:10,221  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:13,838  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:17,723  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:44,475  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:51,163  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:56,439  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:36:07,303  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:36:24,642  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:37:16,228  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:37:55,070  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:34,080  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:44,985  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:53,529  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:55,400  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:39:23,443  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:39:39,072  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:00,900  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:35,991  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:41,176  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:45,227  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:57,691  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:41:34,574  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:22,948  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:28,504  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:49,682  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:02,496  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:03,592  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:34,909  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:37,269  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:23,110  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:40,180  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:42,671  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:45:25,020  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:45:26,231  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:45:32,564  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:40,220  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:44,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:45,764  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:00,916  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:22,934  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:25,421  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:55,492  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:48:23,560  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:48:53,676  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:49:07,480  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:49:55,485  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:50:48,628  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:50:54,512  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:51:49,004  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:52:58,405  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:53:17,268  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:03,980  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:55:08,737  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:19,968  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:37,108  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:56:38,775  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:21,713  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:45,298  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:48,712  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:02,303  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:27,704  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:38,382  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:43,536  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:52,352  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:59:26,443     INFO              FITExplainer: attribute done
+2023-04-25 15:59:29,805  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:00:10,638  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:01:05,546  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:01:52,193  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:19,947  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:23,549  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:41,444  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:49,689  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:58,146  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:10,772  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:03:12,894  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:48,185  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:51,331  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:04:23,465  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:18,969  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:23,646  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:46,154  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:52,753  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:06:07,540  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:07:44,115  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:09,763  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:21,982  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:29,555  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:30,723  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:37,293  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:09:40,138  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:26,485  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:32,616  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:51,830  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:12:06,050  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:13:02,030  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:13:27,167  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:14:39,805  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:15:02,250  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:15:06,319  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:16:21,547  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:19:24,040  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:19:33,028  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:20:01,515  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:21:44,831  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:21:49,641  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:22:43,474  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:24:07,473  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:24:12,634  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:20,031  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:25,336  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:25:27,142  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:44,736  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:08,535     INFO              FITExplainer: attribute done
+2023-04-25 16:26:17,307  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:52,500  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:59,690  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:59,971  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:27:06,348  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:31,540  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:41,214  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:50,764  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:10,967  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:13,426  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:42,216  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:30:15,468  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:30:53,846  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:03,097  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:08,618  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:22,518  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:49,943  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:56,008  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:27,370  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:34,221  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:59,124  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:34:34,457  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:01,742  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:07,057  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:51,290  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:52,852  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:36:05,652  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:36:32,598  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:37:13,766  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:37:26,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:38:18,740  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:39:42,761  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:39:49,439  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:40:48,324     INFO              FITExplainer: attribute done
+2023-04-25 17:07:20,620     INFO              FITExplainer: attribute done
+2023-04-25 17:34:05,044     INFO              FITExplainer: attribute done
+2023-04-25 18:00:48,481     INFO              FITExplainer: attribute done
+2023-04-25 18:27:37,090     INFO              FITExplainer: attribute done
+2023-04-25 18:42:28,410     INFO              FITExplainer: attribute done
+2023-04-25 19:09:09,104     INFO              FITExplainer: attribute done
+2023-04-25 19:35:56,568     INFO              FITExplainer: attribute done
+2023-04-25 20:02:39,450     INFO              FITExplainer: attribute done
+2023-04-25 20:29:20,987     INFO              FITExplainer: attribute done
+2023-04-25 20:44:19,284     INFO              FITExplainer: attribute done
+2023-04-25 20:44:19,414     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_0.pkl
+2023-04-25 20:44:19,446     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_1.pkl
+2023-04-25 20:44:19,473     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_2.pkl
+2023-04-25 20:44:19,503     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_3.pkl
+2023-04-25 20:44:19,530     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_4.pkl
+2023-04-25 20:44:19,558     INFO                      Base: Explanations done.
+2023-04-25 20:44:19,558     INFO                      Base: Evaluating importance...
+2023-04-25 20:44:19,558     INFO                      Base: Data=mimic, Explainer=fit
+2023-04-25 20:44:23,588     INFO         ExplanationRunner: Beginning performance drop for mask=top50_std_mean
+2023-04-25 20:46:49,476     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80054683
+2023-04-25 20:46:49,484     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.79871041
+2023-04-25 20:46:49,490     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80180305
+2023-04-25 20:46:49,496     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80478369
+2023-04-25 20:46:49,502     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.80410247
+2023-04-25 20:46:49,505     INFO         ExplanationRunner: Beginning performance drop for mask=top50_end_mean
+2023-04-25 20:48:22,956     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.73419156
+2023-04-25 20:48:22,964     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.71684748
+2023-04-25 20:48:22,970     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.72315400
+2023-04-25 20:48:22,976     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.73837416
+2023-04-25 20:48:22,983     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.73238430
+2023-04-25 20:48:22,985     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_std_mean
+2023-04-25 20:51:31,925     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.79783809
+2023-04-25 20:51:31,933     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.79639482
+2023-04-25 20:51:31,939     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80302983
+2023-04-25 20:51:31,945     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80626276
+2023-04-25 20:51:31,952     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.80513066
+2023-04-25 20:51:31,954     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_end_mean
+2023-04-25 20:53:11,478     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.73565619
+2023-04-25 20:53:11,485     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.73097942
+2023-04-25 20:53:11,491     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.73586402
+2023-04-25 20:53:11,497     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.74641260
+2023-04-25 20:53:11,503     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.73211556
+2023-04-25 20:53:11,505     INFO         ExplanationRunner: Beginning performance drop for mask=bal50_std_mean
+2023-04-25 20:53:58,879     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80514682
+2023-04-25 20:53:58,886     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.80702019
+2023-04-25 20:53:58,893     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.81001122
+2023-04-25 20:53:58,899     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80849059
+2023-04-25 20:53:58,905     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.81239551
+2023-04-25 20:53:58,910     INFO                      Base: Evaluating importance done.
+2023-04-25 20:53:58,945     INFO                      Base: All done! Time elapsed: 37111.643986701965
