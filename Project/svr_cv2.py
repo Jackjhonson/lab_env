@@ -17,6 +17,8 @@ import argparse
 
 def get_scale_h(datapath):
     d = pd.read_csv(datapath)
+    float64_columns = d.select_dtypes(include=['float64']).columns
+    d[float64_columns] = d[float64_columns].astype('float32')
     n_row = d.shape[0]
     n_col = d.shape[1]
     x = []
@@ -33,6 +35,8 @@ def get_scale_h(datapath):
         y.append(float(d.iloc[i,2]))
     scaler = MinMaxScaler()
     xs = scaler.fit_transform(x)
+    print(np.isnan(xs[train_num:]))
+    xs[train_num:] = xs[train_num:].astype(np.float32)
     return xs[0:train_num], xs[train_num:], y[0:train_num], y[train_num:]
 
 def get_scale_h2(datapath):
@@ -146,7 +150,7 @@ def svr_test(modelFilePath, test_x, test_y, testResultPath, predResultPath):
     return MSE,RMSE,MAE
 
 def calculate_evaluation(label, pred):
-    label = label.tolist()
+    # label = label.tolist()
     sum = len(label)
     MSE = 0
     MAE = 0
@@ -161,7 +165,7 @@ def calculate_evaluation(label, pred):
     return MSE_r, RMSE_r, MAE_r
 
 def get_DC_QR(modelFilePath, vector, label, DCResultPath):
-    label = label.tolist()
+    # label = label.tolist()
     # 加载模型
     model = joblib.load(modelFilePath)
     # 使用模型预测标签
@@ -187,11 +191,11 @@ def get_DC_QR(modelFilePath, vector, label, DCResultPath):
     fw.close()
 
 def overall_for(train_x, test_x, train_y, test_y, file_index):
-    modelFilePath = "/home/zcx/python/project/data/pingwang_svr_model/model/model_"+str(file_index)+".pkl"
-    parametersFilePath = "/home/zcx/python/project/data/pingwang_svr_model/model/parameters_"+str(file_index)+".txt"
-    testResultPath = "/home/zcx/python/project/data/pingwang_svr_model/result/testResult_"+str(file_index)+".txt"
-    predResultPath = "/home/zcx/python/project/data/pingwang_svr_model/result/predictResult_"+str(file_index)+".json"
-    DCResultPath = "/home/zcx/python/project/data/pingwang_svr_model/result/DCResult_"+str(file_index)+".txt"
+    modelFilePath = "/home/lzy/lab/Project/TaihuData/svr_model/model_"+str(file_index)+".pkl"
+    parametersFilePath = "/home/lzy/lab/Project/TaihuData/svr_model/parameters_"+str(file_index)+".txt"
+    testResultPath = "/home/lzy/lab/Project/TaihuData/svr_model/result/testResult_"+str(file_index)+".txt"
+    predResultPath = "/home/lzy/lab/Project/TaihuData/svr_model/result/predictResult_"+str(file_index)+".json"
+    DCResultPath = "/home/lzy/lab/Project/TaihuData/svr_model/result/DCResult_"+str(file_index)+".txt"
     # 网格搜索参数
     p_C, p_gamma = get_best_para(train_x, train_y, parametersFilePath)
     # 训练模型
@@ -202,16 +206,16 @@ def overall_for(train_x, test_x, train_y, test_y, file_index):
     get_DC_QR(modelFilePath, test_x, test_y, DCResultPath)
 
 def train_svr():
-    # for i in range(2,73):
-    #     train_x, test_x, train_y, test_y = get_scale_h('/home/zcx/python/project/data/pingwang_data/train_data/平望时频训练数据（t+'+str(i)+'）.csv')
-    #     overall_for(train_x, test_x, train_y, test_y, 'h(t+'+str(i)+')')
-    i = 2    
-    train_x, test_x, train_y, test_y = get_scale_h('/home/zcx/python/project/data/pingwang_data/train_data/平望时频训练数据（t+'+str(i)+'）.csv')
-    overall_for(train_x, test_x, train_y, test_y, 'h(t+'+str(i)+')')
+    for i in range(1,4):
+        train_x, test_x, train_y, test_y = get_scale_h('/home/lzy/lab/Project/TaihuData/Taihu'+str(i)+'.csv')
+        overall_for(train_x, test_x, train_y, test_y, 'd(t+'+str(i)+')')
+    # i = 2    
+    # train_x, test_x, train_y, test_y = get_scale_h('/home/lzy/lab/Project/TaihuData/Taihu'+str(i)+'.csv')
+    # overall_for(train_x, test_x, train_y, test_y, 'h(t+'+str(i)+')')
 
 def train_svr2(i):
     # for i in range(64,72):
-    train_x, test_x, train_y, test_y = get_scale_h2('/home/zcx/python/project/data/pingwang_data/train_data/平望时频训练数据（t+'+str(i)+'）.csv')
+    train_x, test_x, train_y, test_y = get_scale_h2('/home/zcx/python/project/data/data/train_data/平望时频训练数据（t+'+str(i)+'）.csv')
     overall_for(train_x, test_x, train_y, test_y, 'h(t+'+str(i)+')')
 
 def args():
@@ -221,12 +225,12 @@ def args():
     return parser
 
 def get_all_para():
-    # para = np.load('/home/zcx/python/project/data/pingwang_svr_model/model/parameters_d(t+3).npy',allow_pickle=True)
+    # para = np.load('/home/lzy/lab/Project/TaihuData/svr_model/parameters_d(t+3).npy',allow_pickle=True)
     # print(para)
 
-    fw = open('/home/zcx/python/project/data/pingwang_svr_model/all/all_h_para.txt','w')
+    fw = open('/home/lzy/lab/Project/TaihuData/svr_model/all/all_d_para.txt','w')
     for i in range(1,73):
-        fr = open('/home/zcx/python/project/data/pingwang_svr_model/model/parameters_h(t+'+str(i)+').txt','r')
+        fr = open('/home/lzy/lab/Project/TaihuData/svr_model/parameters_d(t+'+str(i)+').txt','r')
         g_c = []
         for line in fr:
             temp = line.split(':')
@@ -235,9 +239,9 @@ def get_all_para():
     fw.close()
 
 def get_all_rmse():
-    fw = open('/home/zcx/python/project/data/pingwang_svr_model/all/all_h_rmse.txt','w')
+    fw = open('/home/lzy/lab/Project/TaihuData/svr_model/all/all_d_rmse.txt','w')
     for i in range(1,73):
-        fr = open('/home/zcx/python/project/data/pingwang_svr_model/result/testResult_h(t+'+str(i)+').txt','r')
+        fr = open('/home/lzy/lab/Project/TaihuData/svr_model/result/testResult_d(t+'+str(i)+').txt','r')
         for line in fr:
             temp1 = line.split('|')
             temp2 = temp1[1].strip().split(':')
@@ -245,9 +249,9 @@ def get_all_rmse():
     fw.close()
 
 def get_all_DC():
-    fw = open('/home/zcx/python/project/data/pingwang_svr_model/all/all_h_DC.txt','w')
+    fw = open('/home/lzy/lab/Project/TaihuData/svr_model/all/all_d_DC.txt','w')
     for i in range(1,73):
-        fr = open('/home/zcx/python/project/data/pingwang_svr_model/result/DCResult_h(t+'+str(i)+').txt','r')
+        fr = open('/home/lzy/lab/Project/TaihuData/svr_model/result/DCResult_d(t+'+str(i)+').txt','r')
         for line in fr:
             temp1 = line.split('|')
             temp2 = temp1[0].strip().split(':')
@@ -255,9 +259,9 @@ def get_all_DC():
     fw.close()
 
 def get_all_QR():
-    fw = open('/home/zcx/python/project/data/pingwang_svr_model/all/all_h_QR.txt','w')
+    fw = open('/home/lzy/lab/Project/TaihuData/svr_model/all/all_d_QR.txt','w')
     for i in range(1,73):
-        fr = open('/home/zcx/python/project/data/pingwang_svr_model/result/DCResult_h(t+'+str(i)+').txt','r')
+        fr = open('/home/lzy/lab/Project/TaihuData/svr_model/result/DCResult_d(t+'+str(i)+').txt','r')
         for line in fr:
             temp1 = line.split('|')
             temp2 = temp1[1].strip().split(':')
@@ -265,10 +269,10 @@ def get_all_QR():
     fw.close()
 
 if __name__ == '__main__':
-    # start = time.time()
-    # train_svr()
-    # end = time.time()
-    # print(end-start)
+    start = time.time()
+    train_svr()
+    end = time.time()
+    print(end-start)
 
     # parser = args()
     # args = parser.parse_args()
@@ -277,5 +281,5 @@ if __name__ == '__main__':
 
     # get_all_para()
     # get_all_rmse()
-    get_all_DC()
-    get_all_QR()
+    # get_all_DC()
+    # get_all_QR()
