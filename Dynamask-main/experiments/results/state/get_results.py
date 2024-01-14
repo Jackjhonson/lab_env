@@ -23,7 +23,7 @@ def process_results(CV, explainers):
                 saliency = pkl.load(file)
                 if saliency.shape[1] < saliency.shape[2]:
                     saliency = saliency.transpose((0, 2, 1))
-                if explainer in ["deep_lift", "integrated_gradient", "gradient_shap", "lime", "retain", "fo", "afo"]:
+                if explainer in ["deep_lift", "integrated_gradient", "gradient_shap", "lime", "retain", "fo", "afo", "tfs"]:
                     saliency = np.abs(saliency)  # Only the absolute value defines the importance in these cases
                 # Normalize the saliency map:
                 saliency -= saliency.min(axis=(1, 2), keepdims=True)
@@ -64,7 +64,7 @@ def process_results(CV, explainers):
     )
 
     print(results_df)
-    results_df.to_csv(os.path.join(path, "state_benchmark.csv"))
+    results_df.to_csv("/home/lzy/lab/Dynamask-main/experiments/results/state/res/tfs.csv")
 
 
 if __name__ == "__main__":

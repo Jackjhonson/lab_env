@@ -182,6 +182,7 @@ class FOExplainer(BaseExplainer):
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(self.n_samples):
+                    # 将x_t时刻第i个特征进行替换，采样范围为均匀分布范围[-3,3)
                     x_hat[:, i, t] = torch.Tensor(np.random.uniform(-3, +3, size=(len(x),)))
                     y_hat_t = self.base_model.predict(x_hat, return_all=False)
                     kl = torch.abs(y_hat_t - p_y_t)
@@ -194,6 +195,53 @@ class FOExplainer(BaseExplainer):
         if self.n_samples != 10:
             return f"fo_sample_{self.n_samples}"
         return "fo"
+
+class TFSExplainer(BaseExplainer):
+
+    def __init__(self, device, n_samples=10, **kwargs):
+        super().__init__(device)
+        self.n_samples = n_samples
+        if len(kwargs) > 0:
+            log = logging.getLogger(TFSExplainer.__name__)
+            log.warning(f"kwargs is not empty. Unused kwargs={kwargs}")
+
+    def attribute(self, x):
+        """
+        Compute importance score for a sample x, over time and features
+        :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
+        :param n_samples: number of Monte-Carlo samples
+        :return: Importance score matrix of shape:[batch, features, time]
+        """
+        self.base_model.eval()
+        self.base_model.zero_grad()
+
+        x = x.to(self.device)
+        _, n_features, t_len = x.shape
+        score = np.zeros(list(x.shape))
+
+        for t in range(1, t_len):
+
+            for i in range(n_features):
+                div_all=[]
+                x_o = x[:,:,0:t+1].clone()
+                for _ in range(self.n_samples):
+                    z_o = x[:,:,np.random.randint(0, x.shape[2], dtype='int')].clone()
+                    x_o[:,i+1:,t] = z_o[:,i+1:]
+                    x_with_j = x_o
+                    x_o[:,i:,t] = z_o[:,i:]
+                    x_no_j = x_o
+                    y_with_j = self.base_model.predict(x_with_j, return_all=False)
+                    y_no_j = self.base_model.predict(x_no_j, return_all=False)
+                    div = torch.abs(y_with_j-y_no_j)
+                    div_all.append(np.mean(div.detach().cpu().numpy(), -1))
+                E_div = np.mean(np.array(div_all),axis=0)
+                score[:, i, t] = E_div
+        return score
+
+    def get_name(self):
+        if self.n_samples != 10:
+            return f"tfs_sample_{self.n_samples}"
+        return "tfs"
 
 
 class AFOExplainer(BaseExplainer):

@@ -119,6 +119,109 @@ class FITExplainer:
         return score
 
 
+# class TFS:
+#     def __init__(self, model, activation=torch.nn.Softmax(-1)):
+#         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+#         self.base_model = model.to(self.device)
+#         self.activation = activation
+
+#     def attribute(self, x, y, n_samples=10, distance_metric='kl'):
+#         """
+#         Compute importance score for a sample x, over time and features
+#         :param x: Sample instance to evaluate score for. Shape:[batch, features, time]
+#         :param n_samples: number of Monte-Carlo samples
+#         :return: Importance score matrix of shape:[batch, features, time]
+#         """
+#         x = x.to(self.device)
+#         _, n_features, t_len = x.shape
+#         score = np.zeros(list(x.shape))
+
+#         for t in range(1, t_len):
+
+#             for i in range(n_features):
+#                 div_all=[]
+#                 # x_o = x[:,:,0:t+1].clone()
+#                 # for _ in range(n_samples):
+#                 #     z_o = x[:,:,np.random.randint(0, x.shape[2], dtype='int')].clone()
+#                 x_o = x[:,:,0:t+1].clone()
+#                 gap = 5
+#                 low = (t - gap) if (t - gap) > 0 else 0
+#                 high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+#                 for _ in range(n_samples):
+#                     range_list = np.random.randint(low, high, dtype='int')
+#                     z_o = x[:,:,range_list].clone()    
+#                     x_o[:,i+1:,t] = z_o[:,i+1:]
+#                     x_with_j = x_o
+#                     x_o[:,i:,t] = z_o[:,i:]
+#                     x_no_j = x_o
+#                     y_with_j = self.activation(self.base_model(x_with_j))
+#                     y_no_j = self.activation(self.base_model(x_no_j))
+#                     div = torch.abs(y_with_j-y_no_j)
+#                     div_all.append(np.mean(div.detach().cpu().numpy(), -1))
+#                 E_div = np.mean(np.array(div_all),axis=0)
+#                 score[:, i, t] = E_div
+#         return score
+
+class TFS:
+    def __init__(self, model, train_loader, activation=torch.nn.Softmax(-1)):
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.base_model = model.to(self.device)
+        trainset = list(train_loader.dataset)
+        self.data_distribution = torch.stack([x[0] for x in trainset]) # torch.stack()，沿着一个新维度对输入向量序列进行连接，增加新的维度堆叠已有张量（2->3,3->4）
+        # print(self.data_distribution.size()) # torch.Size([512, 3, 200])
+        # print(self.data_distribution[:,0,:].shape) # torch.Size([512, 200])
+        # z = np.array(self.data_distribution[:, 0, :]).reshape(-1) # shape: (102400,)
+        self.activation = activation
+
+    def attribute(self, x, y):
+        
+        x = x.to(self.device)
+        _, n_features, t_len = x.shape
+        score = np.zeros(x.shape)
+        
+
+        for t in range(1, t_len):
+            
+            for i in range(n_features):
+                # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
+                x_hat_z = x[:, :, 0 : t + 1].clone()
+                x_hat_o = x[:, :, 0 : t + 1].clone()
+                kl_all = []
+                # gap = 5
+                # low = (t - gap) if (t - gap) > 0 else 0
+                # high = (t + gap) if (t + gap) < x.shape[2] else x.shape[2]
+                x_with_i = self.data_distribution[:, i+1:, :]
+                # print(x_with_i.shape) # torch.Size([512, 2, 200]), torch.Size([512, 1, 200]), torch.Size([512, 0, 200])
+                x_with_i_trans = np.transpose(x_with_i, (0, 2, 1)).reshape(x_with_i.shape[0] * x_with_i.shape[2], -1)
+                # print(x_with_i_trans.shape) # torch.Size([102400, 2]), torch.Size([102400, 1]), torch.Size([102400, 0])
+                x_no_i = self.data_distribution[:, i:, :]
+                x_no_i_trans = np.transpose(x_no_i, (0, 2, 1)).reshape(x_no_i.shape[0] * x_no_i.shape[2], -1)
+                for _ in range(10):
+                    # 从x的训练集特征分布中采样t时刻的特征i，
+                    time_stamp = np.random.choice(x_with_i_trans.shape[0], size=(len(x),), replace=False)
+                    # print(time_stamp)
+                    # x_i_inclu = x_with_i_trans[time_stamp, :]
+                    # x_i_exclu = x_no_i_trans[time_stamp, :]
+                    # x_hat_o[:, i+1:, t] = x_i_inclu
+                    # x_hat_z[:, i:, t] = x_i_exclu
+                    x_hat_o[:, i+1:, t] = x_with_i_trans[time_stamp, :]
+                    x_hat_z[:, i:, t] = x_no_i_trans[time_stamp, :]
+                    # batch_dist = np.random.choice(x.shape[0],size=(len(x),))
+                    # time_seed = np.random.randint(0, t_len, dtype='int')
+                    # x_hat_z[:, i:, t] = self.data_distribution[batch_dist,i:,time_seed]
+                    # x_hat_o[:, i+1:, t] = self.data_distribution[batch_dist,i+1:,time_seed]
+                    y_hat_z = self.activation(self.base_model(x_hat_z))
+                    y_hat_o = self.activation(self.base_model(x_hat_o))
+                    # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)
+                    kl = torch.abs((y_hat_z) - (y_hat_o))
+                    # kl_all.append(torch.sum(kl, -1).cpu().detach().numpy())
+                    kl_all.append(np.mean(kl.detach().cpu().numpy(), -1))
+                E_kl = np.mean(np.array(kl_all), axis=0)
+                # score[:, i, t] = 2./(1+np.exp(-1*E_kl)) - 1.
+                score[:, i, t] = E_kl
+        return score
+
+
 class FFCExplainer:
     def __init__(self, model, generator=None, activation=torch.nn.Softmax(-1)):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -193,6 +296,7 @@ class FOExplainer:
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(n_samples):
+                    # 将x_t时刻第i个特征进行替换，采样范围为均匀分布范围[-3,3)
                     x_hat[:, i, t] = torch.Tensor(
                         np.random.uniform(-3, +3, size=(len(x),))
                     )  # torch.Tensor(np.array([np.random.uniform(-3,+3)]).reshape(-1)).to(self.device)
@@ -211,8 +315,16 @@ class AFOExplainer:
     def __init__(self, model, train_loader, activation=torch.nn.Softmax(-1)):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.base_model = model.to(self.device)
+        # print('train_loader.dataset大小为：',train_loader.dataset.__len__()) # 512
         trainset = list(train_loader.dataset)
-        self.data_distribution = torch.stack([x[0] for x in trainset])
+        # print(type(trainset)) # list
+        # print('trainset元素的类型',type(trainset[0])) # <class 'tuple'>
+        self.data_distribution = torch.stack([x[0] for x in trainset]) # torch.stack()，沿着一个新维度对输入向量序列进行连接，增加新的维度堆叠已有张量（2->3,3->4）
+        # print(self.data_distribution.size()) # torch.Size([512, 3, 200])
+        # print(self.data_distribution[:,0,:].shape) # torch.Size([512, 200])
+        # z = np.array(self.data_distribution[:, 0, :]).reshape(-1) # shape: (102400,)
+        # print(torch.Tensor(np.random.choice(z, size=(200,))).to(self.device))
+        # print(z.shape)
         self.activation = activation
 
     def attribute(self, x, y, retrospective=False):
@@ -223,6 +335,7 @@ class AFOExplainer:
         :return: Importance score matrix of shape:[batch, features, time]
         """
         x = x.to(self.device)
+        # print('x的长度',len(x)) # 200
         _, n_features, t_len = x.shape
         score = np.zeros(x.shape)
         if retrospective:
@@ -232,10 +345,12 @@ class AFOExplainer:
             if not retrospective:
                 p_y_t = self.activation(self.base_model(x[:, :, : t + 1]))
             for i in range(n_features):
-                feature_dist = np.array(self.data_distribution[:, i, :]).reshape(-1)
+                # reshape(-1)的作用是将数组变为一维,即从多个时间点对应的相同特征进行选取
+                feature_dist = np.array(self.data_distribution[:, i, :]).reshape(-1) # shape: (102400,)
                 x_hat = x[:, :, 0 : t + 1].clone()
                 kl_all = []
                 for _ in range(10):
+                    # 从x的训练集特征分布中采样t时刻的特征i，
                     x_hat[:, i, t] = torch.Tensor(np.random.choice(feature_dist, size=(len(x),))).to(self.device)
                     y_hat_t = self.activation(self.base_model(x_hat))
                     # kl = torch.nn.KLDivLoss(reduction='none')(torch.log(y_hat_t), p_y_t)

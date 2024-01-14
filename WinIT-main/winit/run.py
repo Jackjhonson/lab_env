@@ -9,7 +9,7 @@ from datetime import datetime
 from typing import Dict, Any, List
 
 import pandas as pd
-import torch.cuda
+import torch
 
 from winit.dataloader import Mimic, SimulatedSwitch, SimulatedState, SimulatedSpike, \
     WinITDataset, SimulatedData
@@ -137,7 +137,7 @@ class Params:
                 generator_dict["winit"] = generator_dict_list
             else:
                 explainer_dict = {}
-                if explainer in ["fit", "fo", "afo"] and nsamples != -1:
+                if explainer in ["fit", "fo", "afo", "tfs"] and nsamples != -1:
                     explainer_dict["n_samples"] = nsamples
                 if explainer == "fit":
                     generator_dict["fit"] = [explainer_dict]
@@ -282,7 +282,7 @@ if __name__ == '__main__':
                         help='Simulation Spike Delay amount')
     parser.add_argument('--explainer', nargs='+', type=str, default=['winit'],
                         choices=['fit', 'winit', 'ig', 'deeplift', 'fo', 'afo', 'gradientshap',
-                                 'dynamask'],
+                                 'dynamask', 'tfs'],
                         help='Explainer model')
     parser.add_argument('--cv', nargs='+', type=int, default=[0, 1, 2, 3, 4],
                         choices=[0, 1, 2, 3, 4], help="CV to run")

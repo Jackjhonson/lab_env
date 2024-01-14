@@ -1,0 +1,7 @@
+cv :  0
+Saving file to  ./experiments/results/state/tfs_test_importance_scores_0.pkl
+auc: 0.645171799557837  aupr: 0.0469712541616073
+          AUP  AUP std       AUR  ...  AUROC std      AUPR  AUPR std
+tfs  0.319462      0.0  0.252842  ...        0.0  0.337316       0.0
+
+[1 rows x 12 columns]

@@ -21,6 +21,7 @@ from fit.TSX.explainers import (  # SHAPExplainer,
     LIMExplainer,
     MeanImpExplainer,
     RETAINexplainer,
+    TFS
 )
 from fit.TSX.generator import JointDistributionGenerator, JointFeatureGenerator
 from fit.TSX.models import RETAIN, EncoderRNN, StateClassifier, StateClassifierMIMIC
@@ -349,7 +350,7 @@ if __name__ == "__main__":
                     )
 
         model.load_state_dict(
-            torch.load(os.path.join("./experiments/results/%s/%s_%d.pt" % (data_name, "model", args.cv)))
+            torch.load(os.path.join("./experiments/results/%s/%s_%d.pt" % (data_name, "model", args.cv)),map_location='cpu')
         )
 
         if args.explainer == "fit":
@@ -377,6 +378,12 @@ if __name__ == "__main__":
                     explainer = FITExplainer(model, generator, activation=torch.nn.Sigmoid())
                 else:
                     explainer = FITExplainer(model, generator)
+
+        elif args.explainer == "tfs":
+            if args.data == "mimic_int" or args.data == "simulation_spike":
+                explainer = TFS(model, activation=activation)
+            else:
+                explainer = TFS(model, train_loader)
 
         elif args.explainer == "integrated_gradient":
             if args.data == "mimic_int" or args.data == "simulation_spike":

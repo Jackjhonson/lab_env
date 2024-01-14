@@ -1,0 +1,724 @@
+2023-04-19 00:02:12,424     INFO                      Base: data           : mimic
+2023-04-19 00:02:12,425     INFO                      Base: delay          : 0
+2023-04-19 00:02:12,425     INFO                      Base: explainer      : ['tfs']
+2023-04-19 00:02:12,425     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-19 00:02:12,425     INFO                      Base: testbs         : -1
+2023-04-19 00:02:12,425     INFO                      Base: dataseed       : 1234
+2023-04-19 00:02:12,425     INFO                      Base: datapath       : None
+2023-04-19 00:02:12,425     INFO                      Base: explainerseed  : 2345
+2023-04-19 00:02:12,425     INFO                      Base: outpath        : ./output/
+2023-04-19 00:02:12,425     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-19 00:02:12,425     INFO                      Base: plotpath       : ./plots/
+2023-04-19 00:02:12,425     INFO                      Base: logpath        : ./logs/
+2023-04-19 00:02:12,425     INFO                      Base: resultfile     : results.csv
+2023-04-19 00:02:12,425     INFO                      Base: logfile        : None
+2023-04-19 00:02:12,426     INFO                      Base: train          : False
+2023-04-19 00:02:12,426     INFO                      Base: traingen       : False
+2023-04-19 00:02:12,426     INFO                      Base: skipexplain    : False
+2023-04-19 00:02:12,426     INFO                      Base: eval           : True
+2023-04-19 00:02:12,426     INFO                      Base: loglevel       : info
+2023-04-19 00:02:12,426     INFO                      Base: nondeterministic: False
+2023-04-19 00:02:12,426     INFO                      Base: hiddensize     : 200
+2023-04-19 00:02:12,426     INFO                      Base: batchsize      : 100
+2023-04-19 00:02:12,426     INFO                      Base: dropout        : 0.5
+2023-04-19 00:02:12,426     INFO                      Base: numlayers      : 1
+2023-04-19 00:02:12,426     INFO                      Base: modeltype      : gru
+2023-04-19 00:02:12,426     INFO                      Base: lr             : None
+2023-04-19 00:02:12,426     INFO                      Base: joint          : False
+2023-04-19 00:02:12,427     INFO                      Base: conditional    : False
+2023-04-19 00:02:12,427     INFO                      Base: area           : None
+2023-04-19 00:02:12,427     INFO                      Base: blurtype       : None
+2023-04-19 00:02:12,427     INFO                      Base: deletion       : None
+2023-04-19 00:02:12,427     INFO                      Base: sizereg        : None
+2023-04-19 00:02:12,427     INFO                      Base: timereg        : None
+2023-04-19 00:02:12,427     INFO                      Base: loss           : None
+2023-04-19 00:02:12,427     INFO                      Base: epoch          : 200
+2023-04-19 00:02:12,427     INFO                      Base: lastonly       : None
+2023-04-19 00:02:12,427     INFO                      Base: window         : [10]
+2023-04-19 00:02:12,427     INFO                      Base: winitmetric    : ['pd']
+2023-04-19 00:02:12,427     INFO                      Base: usedatadist    : False
+2023-04-19 00:02:12,427     INFO                      Base: samples        : -1
+2023-04-19 00:02:12,428     INFO                      Base: maskseed       : 43814
+2023-04-19 00:02:12,428     INFO                      Base: mask           : ['std', 'end']
+2023-04-19 00:02:12,428     INFO                      Base: top            : 50
+2023-04-19 00:02:12,428     INFO                      Base: toppc          : 0.05
+2023-04-19 00:02:12,428     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-19 00:02:12,428     INFO                      Base: aggregate      : ['mean']
+2023-04-19 00:02:19,560     INFO         ExplanationRunner: Average Accuracy = 0.9109±0.0015
+2023-04-19 00:02:19,561     INFO         ExplanationRunner: Model Accuracy on Tests = [0.909308, 0.913658, 0.909743, 0.910613, 0.911266].
+2023-04-19 00:02:19,561     INFO         ExplanationRunner: Average AUC = 0.8095±0.0024
+2023-04-19 00:02:19,561     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
+2023-04-19 00:02:19,561     INFO                      Base: Load data and train/load model done.
+2023-04-19 00:02:19,562     INFO                      Base: Running Explanations...Data=mimic, Explainer=tfs, Dict={}
+2023-04-19 15:01:50,279     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/tfs_test_importance_scores_0.pkl
+2023-04-19 15:01:50,319     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/tfs_test_importance_scores_1.pkl
+2023-04-19 15:01:50,357     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/tfs_test_importance_scores_2.pkl
+2023-04-19 15:01:50,386     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/tfs_test_importance_scores_3.pkl
+2023-04-19 15:01:50,418     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/tfs_test_importance_scores_4.pkl
+2023-04-19 15:01:50,448     INFO                      Base: Explanations done.
+2023-04-19 15:01:50,448     INFO                      Base: Evaluating importance...
+2023-04-19 15:01:50,449     INFO                      Base: Data=mimic, Explainer=tfs
+2023-04-19 15:01:54,616     INFO         ExplanationRunner: Beginning performance drop for mask=top50_std_mean
+2023-04-19 15:04:22,872     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80364928
+2023-04-19 15:04:22,899     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.80598507
+2023-04-19 15:04:22,913     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80749647
+2023-04-19 15:04:22,920     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80597237
+2023-04-19 15:04:22,926     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.81002768
+2023-04-19 15:04:22,928     INFO         ExplanationRunner: Beginning performance drop for mask=top50_end_mean
+2023-04-19 15:05:18,095     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.75089021
+2023-04-19 15:05:18,103     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.75607444
+2023-04-19 15:05:18,109     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.76130428
+2023-04-19 15:05:18,115     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.75582908
+2023-04-19 15:05:18,122     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.75917343
+2023-04-19 15:05:18,124     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_std_mean
+2023-04-19 15:07:56,660     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80238902
+2023-04-19 15:07:56,668     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.80433224
+2023-04-19 15:07:56,675     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80501289
+2023-04-19 15:07:56,681     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80365852
+2023-04-19 15:07:56,688     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.80719858
+2023-04-19 15:07:56,690     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_end_mean
+2023-04-19 15:08:50,295     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.75205926
+2023-04-19 15:08:50,302     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.75640582
+2023-04-19 15:08:50,308     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.75762220
+2023-04-19 15:08:50,315     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.75624994
+2023-04-19 15:08:50,321     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.75623782
+2023-04-19 15:08:50,323     INFO         ExplanationRunner: Beginning performance drop for mask=bal50_std_mean
+2023-04-19 15:09:40,707     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80781052
+2023-04-19 15:09:40,715     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.80958575
+2023-04-19 15:09:40,721     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.81152608
+2023-04-19 15:09:40,728     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80934963
+2023-04-19 15:09:40,734     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.81446574
+2023-04-19 15:09:40,762     INFO                      Base: Evaluating importance done.
+2023-04-19 15:09:40,776     INFO                     Utils: Creating output/gru1layer/mimic/results.csv
+2023-04-19 15:09:40,796     INFO                      Base: All done! Time elapsed: 54448.3717982769
+2023-04-22 18:23:50,529     INFO                      Base: data           : spike
+2023-04-22 18:23:50,529     INFO                      Base: delay          : 0
+2023-04-22 18:23:50,529     INFO                      Base: explainer      : ['winit']
+2023-04-22 18:23:50,530     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-22 18:23:50,530     INFO                      Base: testbs         : -1
+2023-04-22 18:23:50,530     INFO                      Base: dataseed       : 1234
+2023-04-22 18:23:50,530     INFO                      Base: datapath       : None
+2023-04-22 18:23:50,530     INFO                      Base: explainerseed  : 2345
+2023-04-22 18:23:50,530     INFO                      Base: outpath        : ./output/
+2023-04-22 18:23:50,530     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-22 18:23:50,530     INFO                      Base: plotpath       : ./plots/
+2023-04-22 18:23:50,530     INFO                      Base: logpath        : ./logs/
+2023-04-22 18:23:50,530     INFO                      Base: resultfile     : results.csv
+2023-04-22 18:23:50,530     INFO                      Base: logfile        : None
+2023-04-22 18:23:50,530     INFO                      Base: train          : True
+2023-04-22 18:23:50,530     INFO                      Base: traingen       : False
+2023-04-22 18:23:50,531     INFO                      Base: skipexplain    : True
+2023-04-22 18:23:50,531     INFO                      Base: eval           : False
+2023-04-22 18:23:50,531     INFO                      Base: loglevel       : info
+2023-04-22 18:23:50,531     INFO                      Base: nondeterministic: False
+2023-04-22 18:23:50,531     INFO                      Base: hiddensize     : 200
+2023-04-22 18:23:50,531     INFO                      Base: batchsize      : 100
+2023-04-22 18:23:50,531     INFO                      Base: dropout        : 0.5
+2023-04-22 18:23:50,531     INFO                      Base: numlayers      : 1
+2023-04-22 18:23:50,531     INFO                      Base: modeltype      : gru
+2023-04-22 18:23:50,531     INFO                      Base: lr             : None
+2023-04-22 18:23:50,531     INFO                      Base: joint          : False
+2023-04-22 18:23:50,531     INFO                      Base: conditional    : False
+2023-04-22 18:23:50,532     INFO                      Base: area           : None
+2023-04-22 18:23:50,532     INFO                      Base: blurtype       : None
+2023-04-22 18:23:50,532     INFO                      Base: deletion       : None
+2023-04-22 18:23:50,532     INFO                      Base: sizereg        : None
+2023-04-22 18:23:50,532     INFO                      Base: timereg        : None
+2023-04-22 18:23:50,532     INFO                      Base: loss           : None
+2023-04-22 18:23:50,532     INFO                      Base: epoch          : 200
+2023-04-22 18:23:50,532     INFO                      Base: lastonly       : None
+2023-04-22 18:23:50,532     INFO                      Base: window         : [10]
+2023-04-22 18:23:50,532     INFO                      Base: winitmetric    : ['pd']
+2023-04-22 18:23:50,532     INFO                      Base: usedatadist    : False
+2023-04-22 18:23:50,532     INFO                      Base: samples        : -1
+2023-04-22 18:23:50,532     INFO                      Base: maskseed       : 43814
+2023-04-22 18:23:50,533     INFO                      Base: mask           : ['std', 'end']
+2023-04-22 18:23:50,533     INFO                      Base: top            : 50
+2023-04-22 18:23:50,533     INFO                      Base: toppc          : 0.05
+2023-04-22 18:23:50,533     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-22 18:23:50,533     INFO                      Base: aggregate      : ['mean']
+2023-04-22 18:23:50,557     INFO        ModelTrainerWithCv: Training model for cv=0
+2023-04-22 18:23:56,899     INFO              ModelTrainer: Epoch 1
+2023-04-22 18:23:56,900     INFO              ModelTrainer: Training   ===> Loss: 0.5449767470359802, Acc: 72.03%, Auc: 0.6306
+2023-04-22 18:23:56,900     INFO              ModelTrainer: Validation ===> Loss: 0.6536465167999268, Acc: 78.95%, Auc: 0.6680
+2023-04-22 18:24:59,215     INFO              ModelTrainer: Epoch 11
+2023-04-22 18:24:59,216     INFO              ModelTrainer: Training   ===> Loss: 0.14375825878232718, Acc: 95.58%, Auc: 0.9747
+2023-04-22 18:24:59,216     INFO              ModelTrainer: Validation ===> Loss: 1.8927980661392212, Acc: 32.42%, Auc: 0.9770
+2023-04-22 18:26:01,390     INFO              ModelTrainer: Epoch 21
+2023-04-22 18:26:01,390     INFO              ModelTrainer: Training   ===> Loss: 0.010251297266222537, Acc: 99.88%, Auc: 1.0000
+2023-04-22 18:26:01,390     INFO              ModelTrainer: Validation ===> Loss: 0.005714309215545654, Acc: 99.99%, Auc: 1.0000
+2023-04-22 18:26:58,034     INFO              ModelTrainer: Test ===> Loss: 0.002260959707200527, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:26:58,035     INFO        ModelTrainerWithCv: Training model for cv=1
+2023-04-22 18:27:04,176     INFO              ModelTrainer: Epoch 1
+2023-04-22 18:27:04,176     INFO              ModelTrainer: Training   ===> Loss: 0.5400289535522461, Acc: 73.94%, Auc: 0.6188
+2023-04-22 18:27:04,176     INFO              ModelTrainer: Validation ===> Loss: 0.629600214958191, Acc: 79.22%, Auc: 0.6395
+2023-04-22 18:28:06,074     INFO              ModelTrainer: Epoch 11
+2023-04-22 18:28:06,075     INFO              ModelTrainer: Training   ===> Loss: 0.06883319765329361, Acc: 98.40%, Auc: 0.9985
+2023-04-22 18:28:06,075     INFO              ModelTrainer: Validation ===> Loss: 0.05981012210249901, Acc: 97.73%, Auc: 0.9992
+2023-04-22 18:29:08,052     INFO              ModelTrainer: Epoch 21
+2023-04-22 18:29:08,052     INFO              ModelTrainer: Training   ===> Loss: 0.026539150765165685, Acc: 99.36%, Auc: 0.9998
+2023-04-22 18:29:08,052     INFO              ModelTrainer: Validation ===> Loss: 0.011276956275105476, Acc: 99.96%, Auc: 1.0000
+2023-04-22 18:30:03,641     INFO              ModelTrainer: Test ===> Loss: 0.003159039421007037, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:30:03,642     INFO        ModelTrainerWithCv: Training model for cv=2
+2023-04-22 18:30:09,627     INFO              ModelTrainer: Epoch 1
+2023-04-22 18:30:09,627     INFO              ModelTrainer: Training   ===> Loss: 0.6326325073838234, Acc: 61.17%, Auc: 0.6186
+2023-04-22 18:30:09,627     INFO              ModelTrainer: Validation ===> Loss: 0.6662754058837891, Acc: 77.08%, Auc: 0.6598
+2023-04-22 18:31:10,891     INFO              ModelTrainer: Epoch 11
+2023-04-22 18:31:10,892     INFO              ModelTrainer: Training   ===> Loss: 0.043323961365967986, Acc: 99.22%, Auc: 0.9996
+2023-04-22 18:31:10,892     INFO              ModelTrainer: Validation ===> Loss: 0.03197978585958481, Acc: 99.97%, Auc: 1.0000
+2023-04-22 18:32:13,773     INFO              ModelTrainer: Epoch 21
+2023-04-22 18:32:13,774     INFO              ModelTrainer: Training   ===> Loss: 0.009846316068433225, Acc: 99.88%, Auc: 1.0000
+2023-04-22 18:32:13,774     INFO              ModelTrainer: Validation ===> Loss: 0.005800358857959509, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:33:13,223     INFO              ModelTrainer: Test ===> Loss: 0.006120181176811457, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:33:13,223     INFO        ModelTrainerWithCv: Training model for cv=3
+2023-04-22 18:33:19,702     INFO              ModelTrainer: Epoch 1
+2023-04-22 18:33:19,702     INFO              ModelTrainer: Training   ===> Loss: 0.5429078996181488, Acc: 73.95%, Auc: 0.6112
+2023-04-22 18:33:19,703     INFO              ModelTrainer: Validation ===> Loss: 0.6172272324562073, Acc: 78.79%, Auc: 0.6368
+2023-04-22 18:34:21,457     INFO              ModelTrainer: Epoch 11
+2023-04-22 18:34:21,458     INFO              ModelTrainer: Training   ===> Loss: 0.06694484278559684, Acc: 98.35%, Auc: 0.9973
+2023-04-22 18:34:21,458     INFO              ModelTrainer: Validation ===> Loss: 0.027290626987814905, Acc: 99.56%, Auc: 1.0000
+2023-04-22 18:35:23,580     INFO              ModelTrainer: Epoch 21
+2023-04-22 18:35:23,580     INFO              ModelTrainer: Training   ===> Loss: 0.010332518536597491, Acc: 99.85%, Auc: 1.0000
+2023-04-22 18:35:23,580     INFO              ModelTrainer: Validation ===> Loss: 0.004720047395676374, Acc: 99.98%, Auc: 1.0000
+2023-04-22 18:36:17,685     INFO              ModelTrainer: Test ===> Loss: 0.018562705256044865, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:36:17,685     INFO        ModelTrainerWithCv: Training model for cv=4
+2023-04-22 18:36:23,619     INFO              ModelTrainer: Epoch 1
+2023-04-22 18:36:23,620     INFO              ModelTrainer: Training   ===> Loss: 0.5663288071751594, Acc: 69.79%, Auc: 0.6236
+2023-04-22 18:36:23,620     INFO              ModelTrainer: Validation ===> Loss: 0.6310164451599121, Acc: 80.90%, Auc: 0.6533
+2023-04-22 18:37:25,562     INFO              ModelTrainer: Epoch 11
+2023-04-22 18:37:25,562     INFO              ModelTrainer: Training   ===> Loss: 0.030789989605546, Acc: 99.64%, Auc: 0.9998
+2023-04-22 18:37:25,563     INFO              ModelTrainer: Validation ===> Loss: 0.032553819194436076, Acc: 100.00%, Auc: 1.0000
+2023-04-22 18:38:27,890     INFO              ModelTrainer: Epoch 21
+2023-04-22 18:38:27,891     INFO              ModelTrainer: Training   ===> Loss: 0.009028323809616268, Acc: 99.88%, Auc: 1.0000
+2023-04-22 18:38:27,891     INFO              ModelTrainer: Validation ===> Loss: 0.003984725335612893, Acc: 99.98%, Auc: 1.0000
+2023-04-22 18:39:24,001     INFO              ModelTrainer: Test ===> Loss: 0.010851029306650162, Acc: 99.99%, Auc: 1.0000
+2023-04-22 18:39:27,133     INFO         ExplanationRunner: Average Accuracy = 1.0000±0.0001
+2023-04-22 18:39:27,133     INFO         ExplanationRunner: Model Accuracy on Tests = [1.0, 1.0, 1.0, 1.0, 0.999875].
+2023-04-22 18:39:27,133     INFO         ExplanationRunner: Average AUC = 1.0000±0.0000
+2023-04-22 18:39:27,133     INFO         ExplanationRunner: Model AUC on Tests = [1.0, 1.0, 1.0, 1.0, 1.0].
+2023-04-22 18:39:27,133     INFO                      Base: Load data and train/load model done.
+2023-04-22 18:39:27,136     INFO                      Base: All done! Time elapsed: 936.6067581176758
+2023-04-25 10:33:45,353     INFO                      Base: data           : mimic
+2023-04-25 10:33:45,353     INFO                      Base: delay          : 0
+2023-04-25 10:33:45,353     INFO                      Base: explainer      : ['fit']
+2023-04-25 10:33:45,353     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-25 10:33:45,353     INFO                      Base: testbs         : -1
+2023-04-25 10:33:45,353     INFO                      Base: dataseed       : 1234
+2023-04-25 10:33:45,353     INFO                      Base: datapath       : None
+2023-04-25 10:33:45,353     INFO                      Base: explainerseed  : 2345
+2023-04-25 10:33:45,353     INFO                      Base: outpath        : ./output/
+2023-04-25 10:33:45,354     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-25 10:33:45,354     INFO                      Base: plotpath       : ./plots/
+2023-04-25 10:33:45,354     INFO                      Base: logpath        : ./logs/
+2023-04-25 10:33:45,354     INFO                      Base: resultfile     : results.csv
+2023-04-25 10:33:45,354     INFO                      Base: logfile        : None
+2023-04-25 10:33:45,354     INFO                      Base: train          : False
+2023-04-25 10:33:45,354     INFO                      Base: traingen       : False
+2023-04-25 10:33:45,354     INFO                      Base: skipexplain    : False
+2023-04-25 10:33:45,354     INFO                      Base: eval           : True
+2023-04-25 10:33:45,354     INFO                      Base: loglevel       : info
+2023-04-25 10:33:45,354     INFO                      Base: nondeterministic: False
+2023-04-25 10:33:45,354     INFO                      Base: hiddensize     : 200
+2023-04-25 10:33:45,354     INFO                      Base: batchsize      : 100
+2023-04-25 10:33:45,354     INFO                      Base: dropout        : 0.5
+2023-04-25 10:33:45,355     INFO                      Base: numlayers      : 1
+2023-04-25 10:33:45,355     INFO                      Base: modeltype      : gru
+2023-04-25 10:33:45,355     INFO                      Base: lr             : None
+2023-04-25 10:33:45,355     INFO                      Base: joint          : False
+2023-04-25 10:33:45,355     INFO                      Base: conditional    : False
+2023-04-25 10:33:45,355     INFO                      Base: area           : None
+2023-04-25 10:33:45,355     INFO                      Base: blurtype       : None
+2023-04-25 10:33:45,355     INFO                      Base: deletion       : None
+2023-04-25 10:33:45,355     INFO                      Base: sizereg        : None
+2023-04-25 10:33:45,355     INFO                      Base: timereg        : None
+2023-04-25 10:33:45,355     INFO                      Base: loss           : None
+2023-04-25 10:33:45,355     INFO                      Base: epoch          : 200
+2023-04-25 10:33:45,355     INFO                      Base: lastonly       : None
+2023-04-25 10:33:45,356     INFO                      Base: window         : [10]
+2023-04-25 10:33:45,356     INFO                      Base: winitmetric    : ['pd']
+2023-04-25 10:33:45,356     INFO                      Base: usedatadist    : False
+2023-04-25 10:33:45,356     INFO                      Base: samples        : -1
+2023-04-25 10:33:45,356     INFO                      Base: maskseed       : 43814
+2023-04-25 10:33:45,356     INFO                      Base: mask           : ['std', 'end']
+2023-04-25 10:33:45,356     INFO                      Base: top            : 50
+2023-04-25 10:33:45,356     INFO                      Base: toppc          : 0.05
+2023-04-25 10:33:45,356     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-25 10:33:45,356     INFO                      Base: aggregate      : ['mean']
+2023-04-25 10:33:52,385     INFO         ExplanationRunner: Average Accuracy = 0.9109±0.0015
+2023-04-25 10:33:52,385     INFO         ExplanationRunner: Model Accuracy on Tests = [0.909308, 0.913658, 0.909743, 0.910613, 0.911266].
+2023-04-25 10:33:52,385     INFO         ExplanationRunner: Average AUC = 0.8095±0.0024
+2023-04-25 10:33:52,386     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
+2023-04-25 10:33:52,386     INFO                      Base: Load data and train/load model done.
+2023-04-25 10:33:52,387     INFO                      Base: Running Explanations...Data=mimic, Explainer=fit, Dict={}
+2023-04-25 10:33:52,392     INFO                      Base: Time elapsed: 7.0393147468566895
+2023-04-25 10:33:52,392    ERROR                      Base: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
+Traceback (most recent call last):
+  File "/home/lzy/lab/WinIT-main/winit/run.py", line 431, in <module>
+    runner.load_generators()
+  File "/home/lzy/lab/WinIT-main/winit/explanationrunner.py", line 354, in load_generators
+    self.explainers[cv].load_generators()
+  File "/home/lzy/lab/WinIT-main/winit/explainer/fitexplainers.py", line 94, in load_generators
+    self.generator.load_generator()
+  File "/home/lzy/lab/WinIT-main/winit/explainer/generator/jointgenerator.py", line 498, in load_generator
+    self.load_state_dict(torch.load(str(self._get_model_file_name())))
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 712, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1046, in _load
+    result = unpickler.load()
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1016, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1001, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 176, in default_restore_location
+    result = fn(storage, location)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 152, in _cuda_deserialize
+    device = validate_cuda_device(location)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 136, in validate_cuda_device
+    raise RuntimeError('Attempting to deserialize object on a CUDA '
+RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
+Traceback (most recent call last):
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/lzy/lab/WinIT-main/winit/run.py", line 477, in <module>
+    raise e
+  File "/home/lzy/lab/WinIT-main/winit/run.py", line 431, in <module>
+    runner.load_generators()
+  File "/home/lzy/lab/WinIT-main/winit/explanationrunner.py", line 354, in load_generators
+    self.explainers[cv].load_generators()
+  File "/home/lzy/lab/WinIT-main/winit/explainer/fitexplainers.py", line 94, in load_generators
+    self.generator.load_generator()
+  File "/home/lzy/lab/WinIT-main/winit/explainer/generator/jointgenerator.py", line 498, in load_generator
+    self.load_state_dict(torch.load(str(self._get_model_file_name())))
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 712, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1046, in _load
+    result = unpickler.load()
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1016, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 1001, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 176, in default_restore_location
+    result = fn(storage, location)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 152, in _cuda_deserialize
+    device = validate_cuda_device(location)
+  File "/home/lzy/anaconda3/envs/winit/lib/python3.8/site-packages/torch/serialization.py", line 136, in validate_cuda_device
+    raise RuntimeError('Attempting to deserialize object on a CUDA '
+RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
+2023-04-25 10:35:27,301     INFO                      Base: data           : mimic
+2023-04-25 10:35:27,301     INFO                      Base: delay          : 0
+2023-04-25 10:35:27,301     INFO                      Base: explainer      : ['fit']
+2023-04-25 10:35:27,301     INFO                      Base: cv             : [0, 1, 2, 3, 4]
+2023-04-25 10:35:27,301     INFO                      Base: testbs         : -1
+2023-04-25 10:35:27,301     INFO                      Base: dataseed       : 1234
+2023-04-25 10:35:27,301     INFO                      Base: datapath       : None
+2023-04-25 10:35:27,301     INFO                      Base: explainerseed  : 2345
+2023-04-25 10:35:27,301     INFO                      Base: outpath        : ./output/
+2023-04-25 10:35:27,301     INFO                      Base: ckptpath       : ./ckpt/
+2023-04-25 10:35:27,301     INFO                      Base: plotpath       : ./plots/
+2023-04-25 10:35:27,302     INFO                      Base: logpath        : ./logs/
+2023-04-25 10:35:27,302     INFO                      Base: resultfile     : results.csv
+2023-04-25 10:35:27,302     INFO                      Base: logfile        : None
+2023-04-25 10:35:27,302     INFO                      Base: train          : False
+2023-04-25 10:35:27,302     INFO                      Base: traingen       : False
+2023-04-25 10:35:27,302     INFO                      Base: skipexplain    : False
+2023-04-25 10:35:27,302     INFO                      Base: eval           : True
+2023-04-25 10:35:27,302     INFO                      Base: loglevel       : info
+2023-04-25 10:35:27,302     INFO                      Base: nondeterministic: False
+2023-04-25 10:35:27,302     INFO                      Base: hiddensize     : 200
+2023-04-25 10:35:27,302     INFO                      Base: batchsize      : 100
+2023-04-25 10:35:27,302     INFO                      Base: dropout        : 0.5
+2023-04-25 10:35:27,302     INFO                      Base: numlayers      : 1
+2023-04-25 10:35:27,303     INFO                      Base: modeltype      : gru
+2023-04-25 10:35:27,303     INFO                      Base: lr             : None
+2023-04-25 10:35:27,303     INFO                      Base: joint          : False
+2023-04-25 10:35:27,303     INFO                      Base: conditional    : False
+2023-04-25 10:35:27,303     INFO                      Base: area           : None
+2023-04-25 10:35:27,303     INFO                      Base: blurtype       : None
+2023-04-25 10:35:27,303     INFO                      Base: deletion       : None
+2023-04-25 10:35:27,303     INFO                      Base: sizereg        : None
+2023-04-25 10:35:27,303     INFO                      Base: timereg        : None
+2023-04-25 10:35:27,303     INFO                      Base: loss           : None
+2023-04-25 10:35:27,303     INFO                      Base: epoch          : 200
+2023-04-25 10:35:27,303     INFO                      Base: lastonly       : None
+2023-04-25 10:35:27,303     INFO                      Base: window         : [10]
+2023-04-25 10:35:27,304     INFO                      Base: winitmetric    : ['pd']
+2023-04-25 10:35:27,304     INFO                      Base: usedatadist    : False
+2023-04-25 10:35:27,304     INFO                      Base: samples        : -1
+2023-04-25 10:35:27,304     INFO                      Base: maskseed       : 43814
+2023-04-25 10:35:27,304     INFO                      Base: mask           : ['std', 'end']
+2023-04-25 10:35:27,304     INFO                      Base: top            : 50
+2023-04-25 10:35:27,304     INFO                      Base: toppc          : 0.05
+2023-04-25 10:35:27,304     INFO                      Base: drop           : ['local', 'global', 'bal']
+2023-04-25 10:35:27,304     INFO                      Base: aggregate      : ['mean']
+2023-04-25 10:35:34,313     INFO         ExplanationRunner: Average Accuracy = 0.9109±0.0015
+2023-04-25 10:35:34,313     INFO         ExplanationRunner: Model Accuracy on Tests = [0.909308, 0.913658, 0.909743, 0.910613, 0.911266].
+2023-04-25 10:35:34,314     INFO         ExplanationRunner: Average AUC = 0.8095±0.0024
+2023-04-25 10:35:34,314     INFO         ExplanationRunner: Model AUC on Tests = [0.806687, 0.808766, 0.810214, 0.808274, 0.813697].
+2023-04-25 10:35:34,314     INFO                      Base: Load data and train/load model done.
+2023-04-25 10:35:34,315     INFO                      Base: Running Explanations...Data=mimic, Explainer=fit, Dict={}
+2023-04-25 10:35:38,763     INFO              FITExplainer: Joint Generator Test MSE Loss: 410.1007031202316
+2023-04-25 10:35:43,167     INFO              FITExplainer: Joint Generator Test MSE Loss: 410.6098086118698
+2023-04-25 10:35:47,578     INFO              FITExplainer: Joint Generator Test MSE Loss: 458.7449557304382
+2023-04-25 10:35:52,011     INFO              FITExplainer: Joint Generator Test MSE Loss: 409.95771660804746
+2023-04-25 10:35:56,240     INFO              FITExplainer: Joint Generator Test MSE Loss: 411.3663407564163
+/home/lzy/lab/WinIT-main/winit/explainer/generator/jointgenerator.py:300: UserWarning: torch.solve is deprecated in favor of torch.linalg.solveand will be removed in a future PyTorch release.
+torch.linalg.solve has its arguments reversed and does not return the LU factorization.
+To get the LU factorization see torch.lu, which can be used with torch.lu_solve or torch.lu_unpack.
+X = torch.solve(B, A).solution
+should be replaced with
+X = torch.linalg.solve(A, B) (Triggered internally at  ../aten/src/ATen/native/BatchLinearAlgebra.cpp:859.)
+  intermediate, _ = torch.solve(cov_1_2.transpose(1, 2), cov_2_2)
+2023-04-25 11:02:43,891     INFO              FITExplainer: attribute done
+2023-04-25 11:29:27,051     INFO              FITExplainer: attribute done
+2023-04-25 11:56:01,871     INFO              FITExplainer: attribute done
+2023-04-25 12:22:40,706     INFO              FITExplainer: attribute done
+2023-04-25 12:37:17,457     INFO              FITExplainer: attribute done
+2023-04-25 13:04:05,586     INFO              FITExplainer: attribute done
+2023-04-25 13:30:46,414     INFO              FITExplainer: attribute done
+2023-04-25 13:57:34,172     INFO              FITExplainer: attribute done
+2023-04-25 14:24:22,669     INFO              FITExplainer: attribute done
+2023-04-25 14:39:00,062     INFO              FITExplainer: attribute done
+2023-04-25 14:39:05,290  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:39:16,431  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:02,083  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:17,349  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:19,592  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:32,660  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:40,310  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:53,650  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:40:56,765  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:41:08,687  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:41:13,087  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:41:22,105  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:41:53,518  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:42:14,739  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:42:24,792  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:42:38,292  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:43:30,256  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:43:31,033  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:43:41,996  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:44:21,276  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:44:57,235  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:45:03,721  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:45:21,418  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:45:48,611  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:46:44,507  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:47:23,353  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:47:56,892  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:48:02,516  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:48:05,766  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:48:42,561  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:49:06,361  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:49:09,887  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:50:30,080  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:50:41,203  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:50:59,135  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:53:20,168  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:53:29,487  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:53:32,037  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:53:43,796  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:54:12,853  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:54:26,986  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:54:47,710  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:56:19,708  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:56:29,752  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:56:55,602  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:57:22,622  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:58:49,635  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:58:51,113  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:58:54,337  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:59:00,900  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 14:59:13,904  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:00:00,056  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:01:16,013  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:01:37,603  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:01:40,951  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:02:30,452  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:03:12,084  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:05:20,836  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:05:41,806  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:05:46,532     INFO              FITExplainer: attribute done
+2023-04-25 15:06:11,634  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:06:28,210  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:07:23,628  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:07:33,814  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:00,429  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:03,715  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:07,033  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:31,175  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:37,506  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:41,788  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:50,282  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:53,351  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:08:59,139  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:09:03,891  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:09:26,972  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:09:30,857  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:09:57,346  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:05,657  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:14,015  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:19,049  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:23,277  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:10:38,836  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:04,128  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:11,346  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:39,408  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:11:55,473  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:05,444  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:12,233  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:15,191  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:35,691  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:52,584  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:12:55,350  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:04,054  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:10,196  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:13,275  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:42,701  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:48,900  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:13:58,298  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:14:03,586  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:00,252  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:33,810  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:15:55,422  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 3 index.
+2023-04-25 15:16:30,726  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:16:34,263  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:16:49,557  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:18:26,027  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:19:05,541  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:19:21,194  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:20:18,748  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:10,849  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:16,658  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:38,875  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:21:54,721  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:22:59,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:24:12,929  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:18,375  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:19,768  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:43,170  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:25:54,173  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:26:00,471  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:26:48,578  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:27:10,245  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:28:07,041  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:29:14,294  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:29:42,460  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:30:01,671  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:30:07,041  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:30:48,886  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:32:02,395  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:32:41,970     INFO              FITExplainer: attribute done
+2023-04-25 15:33:01,024  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:11,375  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:17,766  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:32,846  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:38,210  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:39,732  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:40,215  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:33:57,870  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:23,819  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:32,265  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:40,251  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:40,817  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:34:56,836  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:35:08,069  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:10,221  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:13,838  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:17,723  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:44,475  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:51,163  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:35:56,439  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:36:07,303  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:36:24,642  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:37:16,228  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:37:55,070  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:34,080  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:44,985  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:53,529  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:38:55,400  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:39:23,443  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:39:39,072  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:00,900  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:35,991  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:41,176  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:45,227  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:40:57,691  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:41:34,574  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:22,948  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:28,504  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:42:49,682  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:02,496  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:03,592  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:34,909  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:43:37,269  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:23,110  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:40,180  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:44:42,671  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:45:25,020  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:45:26,231  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:45:32,564  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:40,220  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:44,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:46:45,764  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:00,916  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:22,934  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:25,421  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:47:55,492  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:48:23,560  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:48:53,676  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:49:07,480  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:49:55,485  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:50:48,628  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:50:54,512  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:51:49,004  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:52:58,405  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:53:17,268  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:03,980  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 15:55:08,737  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:19,968  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:55:37,108  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:56:38,775  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:21,713  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:45,298  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:57:48,712  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:02,303  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:27,704  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:38,382  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:43,536  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:58:52,352  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 15:59:26,443     INFO              FITExplainer: attribute done
+2023-04-25 15:59:29,805  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:00:10,638  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:01:05,546  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:01:52,193  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:19,947  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:23,549  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:41,444  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:49,689  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:02:58,146  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:10,772  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:03:12,894  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:48,185  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:03:51,331  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:04:23,465  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:18,969  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:23,646  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:46,154  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:05:52,753  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:06:07,540  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:07:44,115  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:09,763  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:21,982  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:29,555  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:30,723  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:08:37,293  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:09:40,138  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:26,485  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:32,616  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:11:51,830  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:12:06,050  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:13:02,030  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:13:27,167  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:14:39,805  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:15:02,250  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:15:06,319  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:16:21,547  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:19:24,040  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:19:33,028  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:20:01,515  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:21:44,831  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:21:49,641  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:22:43,474  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:24:07,473  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:24:12,634  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:20,031  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:25,336  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:25:27,142  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:25:44,736  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:08,535     INFO              FITExplainer: attribute done
+2023-04-25 16:26:17,307  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:52,500  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:59,690  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:26:59,971  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:27:06,348  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:31,540  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:41,214  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:28:50,764  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:10,967  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:13,426  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:29:42,216  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:30:15,468  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 2 index.
+2023-04-25 16:30:53,846  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:03,097  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:08,618  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:22,518  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:49,943  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:32:56,008  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:27,370  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:34,221  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:33:59,124  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:34:34,457  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:01,742  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:07,057  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:51,290  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:35:52,852  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:36:05,652  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:36:32,598  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:37:13,766  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:37:26,494  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:38:18,740  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:39:42,761  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:39:49,439  WARNING     JointFeatureGenerator: WARNING: Carrying forward instead on 1 index.
+2023-04-25 16:40:48,324     INFO              FITExplainer: attribute done
+2023-04-25 17:07:20,620     INFO              FITExplainer: attribute done
+2023-04-25 17:34:05,044     INFO              FITExplainer: attribute done
+2023-04-25 18:00:48,481     INFO              FITExplainer: attribute done
+2023-04-25 18:27:37,090     INFO              FITExplainer: attribute done
+2023-04-25 18:42:28,410     INFO              FITExplainer: attribute done
+2023-04-25 19:09:09,104     INFO              FITExplainer: attribute done
+2023-04-25 19:35:56,568     INFO              FITExplainer: attribute done
+2023-04-25 20:02:39,450     INFO              FITExplainer: attribute done
+2023-04-25 20:29:20,987     INFO              FITExplainer: attribute done
+2023-04-25 20:44:19,284     INFO              FITExplainer: attribute done
+2023-04-25 20:44:19,414     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_0.pkl
+2023-04-25 20:44:19,446     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_1.pkl
+2023-04-25 20:44:19,473     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_2.pkl
+2023-04-25 20:44:19,503     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_3.pkl
+2023-04-25 20:44:19,530     INFO         ExplanationRunner: Saving file to output/gru1layer/mimic/fit_test_importance_scores_4.pkl
+2023-04-25 20:44:19,558     INFO                      Base: Explanations done.
+2023-04-25 20:44:19,558     INFO                      Base: Evaluating importance...
+2023-04-25 20:44:19,558     INFO                      Base: Data=mimic, Explainer=fit
+2023-04-25 20:44:23,588     INFO         ExplanationRunner: Beginning performance drop for mask=top50_std_mean
+2023-04-25 20:46:49,476     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80054683
+2023-04-25 20:46:49,484     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.79871041
+2023-04-25 20:46:49,490     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80180305
+2023-04-25 20:46:49,496     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80478369
+2023-04-25 20:46:49,502     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.80410247
+2023-04-25 20:46:49,505     INFO         ExplanationRunner: Beginning performance drop for mask=top50_end_mean
+2023-04-25 20:48:22,956     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.73419156
+2023-04-25 20:48:22,964     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.71684748
+2023-04-25 20:48:22,970     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.72315400
+2023-04-25 20:48:22,976     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.73837416
+2023-04-25 20:48:22,983     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.73238430
+2023-04-25 20:48:22,985     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_std_mean
+2023-04-25 20:51:31,925     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.79783809
+2023-04-25 20:51:31,933     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.79639482
+2023-04-25 20:51:31,939     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.80302983
+2023-04-25 20:51:31,945     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80626276
+2023-04-25 20:51:31,952     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.80513066
+2023-04-25 20:51:31,954     INFO         ExplanationRunner: Beginning performance drop for mask=globaltop5_end_mean
+2023-04-25 20:53:11,478     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.73565619
+2023-04-25 20:53:11,485     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.73097942
+2023-04-25 20:53:11,491     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.73586402
+2023-04-25 20:53:11,497     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.74641260
+2023-04-25 20:53:11,503     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.73211556
+2023-04-25 20:53:11,505     INFO         ExplanationRunner: Beginning performance drop for mask=bal50_std_mean
+2023-04-25 20:53:58,879     INFO         ExplanationRunner: cv=0, original auc=0.80668708, modified auc=0.80514682
+2023-04-25 20:53:58,886     INFO         ExplanationRunner: cv=1, original auc=0.80876597, modified auc=0.80702019
+2023-04-25 20:53:58,893     INFO         ExplanationRunner: cv=2, original auc=0.81021386, modified auc=0.81001122
+2023-04-25 20:53:58,899     INFO         ExplanationRunner: cv=3, original auc=0.80827410, modified auc=0.80849059
+2023-04-25 20:53:58,905     INFO         ExplanationRunner: cv=4, original auc=0.81369734, modified auc=0.81239551
+2023-04-25 20:53:58,910     INFO                      Base: Evaluating importance done.
+2023-04-25 20:53:58,945     INFO                      Base: All done! Time elapsed: 37111.643986701965

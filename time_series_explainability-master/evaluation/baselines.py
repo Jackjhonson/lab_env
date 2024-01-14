@@ -18,7 +18,7 @@ from TSX.models import StateClassifier, RETAIN, EncoderRNN, ConvClassifier, Stat
 from TSX.generator import JointFeatureGenerator, JointDistributionGenerator
 from TSX.explainers import RETAINexplainer, FITExplainer, IGExplainer, FFCExplainer, \
     DeepLiftExplainer, GradientShapExplainer, AFOExplainer, FOExplainer, SHAPExplainer, \
-    LIMExplainer, CarryForwardExplainer, MeanImpExplainer
+    LIMExplainer, CarryForwardExplainer, MeanImpExplainer, TFS
 from sklearn import metrics
 
 
@@ -213,6 +213,12 @@ if __name__ == '__main__':
             else:
                 explainer = DeepLiftExplainer(model)
 
+        elif args.explainer == "tfs":
+            if args.data == "mimic_int" or args.data == "simulation_spike":
+                explainer = TFS(model, train_loader, activation=activation)
+            else:
+                explainer = TFS(model, train_loader)
+
         elif args.explainer == 'fo':
             if args.data=='mimic_int' or args.data=='simulation_spike':
                 explainer = FOExplainer(model,activation=activation)
@@ -296,6 +302,7 @@ if __name__ == '__main__':
         ranked_feats.append(ranked_features)
 
     importance_scores = np.concatenate(importance_scores, 0)
+    np.nan_to_num(importance_scores, copy=False)
     print('Saving file to ', os.path.join(output_path, '%s_test_importance_scores_%d.pkl' % (args.explainer, args.cv)))
     with open(os.path.join(output_path, '%s_test_importance_scores_%d.pkl' % (args.explainer, args.cv)), 'wb') as f:
         pkl.dump(importance_scores, f, protocol=pkl.HIGHEST_PROTOCOL)

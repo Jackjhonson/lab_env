@@ -495,7 +495,7 @@ class JointFeatureGenerator(BaseFeatureGenerator):
         """
         Load the generator from the disk.
         """
-        self.load_state_dict(torch.load(str(self._get_model_file_name())))
+        self.load_state_dict(torch.load(str(self._get_model_file_name()) ,map_location=torch.device('cpu')))
         self.to(self.device)
 
     @staticmethod

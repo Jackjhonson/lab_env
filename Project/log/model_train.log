@@ -1,0 +1,66 @@
+nohup: ignoring input
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+Traceback (most recent call last):
+  File "/home/lzy/lab/Project/svr_cv2.py", line 280, in <module>
+    get_all_DC()
+  File "/home/lzy/lab/Project/svr_cv2.py", line 248, in get_all_DC
+    fw = open('/home/lzy/lab/Project/TaihuData/pingwang_svr_model/all/all_h_DC.txt','w')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lzy/lab/Project/TaihuData/pingwang_svr_model/all/all_h_DC.txt'
+nohup: ignoring input
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+Traceback (most recent call last):
+  File "/home/lzy/lab/Project/svr_cv2.py", line 280, in <module>
+    get_all_DC()
+  File "/home/lzy/lab/Project/svr_cv2.py", line 250, in get_all_DC
+    fr = open('/home/lzy/lab/Project/TaihuData/pingwang_svr_model/result/DCResult_h(t+'+str(i)+').txt','r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lzy/lab/Project/TaihuData/pingwang_svr_model/result/DCResult_h(t+1).txt'
+nohup: ignoring input
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+Traceback (most recent call last):
+  File "/home/lzy/lab/Project/svr_cv2.py", line 280, in <module>
+    get_all_DC()
+  File "/home/lzy/lab/Project/svr_cv2.py", line 250, in get_all_DC
+    fr = open('/home/lzy/lab/Project/TaihuData/pingwang_svr_model/result/DCResult_h(t+'+str(i)+').txt','r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lzy/lab/Project/TaihuData/pingwang_svr_model/result/DCResult_h(t+1).txt'
+nohup: ignoring input
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+Traceback (most recent call last):
+  File "/home/lzy/lab/Project/svr/svr_model.py", line 305, in <module>
+    overall_for()
+  File "/home/lzy/lab/Project/svr/svr_model.py", line 207, in overall_for
+    svr_training(trainFilePath_x, trainFilePath_y, modelFilePath, parametersFilePath)
+  File "/home/lzy/lab/Project/svr/svr_model.py", line 89, in svr_training
+    fw_x = open(trainFilePath_x,'r')
+PermissionError: [Errno 13] Permission denied: '/home/zcx/python/project/data/svr_model/pingwang_train_x4.csv'
+nohup: ignoring input
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+DC: 0.9776974084386718 | QR: 1.0
+Traceback (most recent call last):
+  File "/home/lzy/lab/Project/svr/svr_model.py", line 306, in <module>
+    get_para()
+  File "/home/lzy/lab/Project/svr/svr_model.py", line 244, in get_para
+    para = np.load('/home/lzy/lab/Project/TaihuData/svr_model/day_data/model/parameters2.npy',allow_pickle=True)
+  File "/home/lzy/anaconda3/lib/python3.8/site-packages/numpy/lib/npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lzy/lab/Project/TaihuData/svr_model/day_data/model/parameters2.npy'
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/lzy/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "

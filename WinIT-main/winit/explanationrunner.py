@@ -23,6 +23,7 @@ from winit.explainer.explainers import (
     AFOExplainer,
     GradientShapExplainer,
     MockExplainer,
+    TFSExplainer,
 )
 from winit.explainer.fitexplainers import FITExplainer
 from winit.explainer.generator.generator import GeneratorTrainingResults
@@ -290,6 +291,11 @@ class ExplanationRunner:
         elif explainer_name == "dynamask":
             self.explainers = {
                 cv: DynamaskExplainer(self.device, **explainer_dict) for cv in self.dataset.cv_to_use()
+            }
+        
+        elif explainer_name == "tfs":
+            self.explainers = {
+                cv: TFSExplainer(self.device, **explainer_dict) for cv in self.dataset.cv_to_use()
             }
 
         else:
